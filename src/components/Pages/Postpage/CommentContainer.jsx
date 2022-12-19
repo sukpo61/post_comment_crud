@@ -7,8 +7,8 @@ import {
 import { useDispatch } from "react-redux";
 
 const CommentContainer = ({ post }) => {
-  const [content, setContent] = useState("");
   const dispatch = useDispatch();
+  const [content, setContent] = useState("");
   const EditButton = document.querySelectorAll(".EditButton");
   const DeleteButton = document.querySelectorAll(".DeleteButton");
   const ButtonDisabledTrue = () => {
