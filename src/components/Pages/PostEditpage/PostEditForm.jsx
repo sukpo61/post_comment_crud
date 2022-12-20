@@ -82,7 +82,7 @@ const TitleInput = styled.input`
   padding: 0 10px;
 `;
 
-const ContentInput = styled.input`
+const ContentInput = styled.textarea`
   border: 1px solid #eee;
   margin-top: 50px;
   height: 500px;

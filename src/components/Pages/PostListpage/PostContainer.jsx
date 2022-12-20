@@ -16,7 +16,7 @@ const PostContainer = ({ post }) => {
   const { comments } = useSelector((state) => state.comments);
 
   const DeletePost = () => {
-    // dispatch(__deleteAllComment(post.id));
+    dispatch(__deleteAllComment(post.id));
 
     console.log(post.id);
     dispatch(__deletePost(post.id));

@@ -34,14 +34,12 @@ const PostAddForm = () => {
       <Form onSubmit={onSubmitHandler}>
         <TitleInput
           className="title"
-          type="text"
           value={title}
           onChange={(e) => {
             setTitle(e.target.value);
           }}
         />
         <ContentInput
-          type="text"
           value={content}
           onChange={(e) => {
             setContent(e.target.value);
@@ -75,7 +73,7 @@ const TitleInput = styled.input`
   padding: 0 10px;
 `;
 
-const ContentInput = styled.input`
+const ContentInput = styled.textarea`
   border: 1px solid #eee;
   margin-top: 50px;
   height: 500px;
