@@ -8,3 +8,5 @@ const App = () => {
 };
 
 export default App;
+
+//커뮤니티페이지
