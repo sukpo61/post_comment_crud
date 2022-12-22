@@ -26,13 +26,16 @@ const ProductComment = (props) => {
     })
     .map((t) => {
       return (
-        <div key={t.id}>
-          {t.title}
-          {t.contnet}
+        <div key={t.id} className="productCommentText">
+          <p>{t.title}</p>
+          <p>{t.content}</p>
+          <div>
+            <button>수정</button>
+            <button>삭제</button>
+          </div>
         </div>
       );
     });
-  console.log(product_comment);
 
   useEffect(() => {
     dispatch(__getproduct_comments());
@@ -40,7 +43,11 @@ const ProductComment = (props) => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    if (content == "") return; // 아무것도 입력하지 않았을 때 dispatch 하지 않음
+    if (title == "") {
+      return alert("제목을 입력해주세요");
+    } else if (content == "") {
+      return alert("내용을 입력해주세요");
+    } // 아무것도 입력하지 않았을 때 dispatch 하지 않음
 
     let NewData = {
       id: uuid(),
@@ -52,6 +59,7 @@ const ProductComment = (props) => {
     dispatch(__addproduct_comments(NewData));
 
     setContent("");
+    setTitle("");
   };
 
   return (
@@ -59,6 +67,7 @@ const ProductComment = (props) => {
       <h2>Review</h2>
       <form onSubmit={onSubmitHandler}>
         <input
+          value={title}
           placeholder="이름을 입력하세요"
           maxLength={10}
           onChange={(e) => {
@@ -66,6 +75,7 @@ const ProductComment = (props) => {
           }}
         ></input>
         <input
+          value={content}
           placeholder="내용을 입력하세요"
           maxLength={40}
           onChange={(e) => {
@@ -81,10 +91,7 @@ const ProductComment = (props) => {
           <p>내용</p>
         </div>
 
-        <div className="productCommentText">
-          <p>{product_comment}</p>
-          <p>내용</p>
-        </div>
+        {product_comment}
       </div>
     </div>
   );

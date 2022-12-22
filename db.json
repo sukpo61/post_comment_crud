@@ -30,6 +30,24 @@
       "detailText1": "크리스마스 캐럴의 주인공이죠. 빨간 코 루돌프를 입체 케이크로 만나보세요. 루돌프 사슴 특유의 붉고 빛나는 코를 반짝이는 빨간색 오너먼트로 재현하고 ,눈과 뿔, 귀는 초콜릿으로 완성했답니다. 루돌프 코를 제외한 모든 장식을 남김없이 달콤하게 즐겨보세요.",
       "detailText2": "속은 진한 초콜릿 풍미로 가득해요. 초코스폰지, 초코크런치, 초코크림이 부드럽게 어우러져 기분 좋은 달콤함을 선사하죠. ‘루돌프 사슴코는’ 케이크는 특별한 디자인과 함께 재미있는 식감까지 겸비했는데요. 톡톡 씹히는 초코크런치의 경쾌한 식감까지 맛있게 즐길 수 있답니다.",
       "detailText3": "사전 예약 기간 : 22.11.24(목) ~ 22.12.18(일) 픽업 기간 : 22.12.22(목) ~ 22.12.25(일)"
+    },
+    {
+      "id": "2",
+      "title": "루돌프 사슴코는",
+      "engtitle": "Rudolph the Reindeer",
+      "img": "images/product/product_visual.jpg",
+      "titleKrText": "반짝이는 빨간 코가 매력적인 입체형 루돌프 케이크초코시트, 초코크림, 바삭한 초코크런치로 완성한 진한 초콜릿 풍미귀여운 디자인으로 크리스마스 파티 케이크로 제격!",
+      "price": "9,800,000 won",
+      "titleEnText": "Three-dimensional Rudolph cake with an attractive shiny red nose Chocolate made with chocolate, sheet chocolate cream, and naan chocolate crunch Perfect for a Christmas party cake with a cute design!",
+      "detail1": "images/product/product_detail1.jpg",
+      "detail2": "images/product/product_detail2.jpg",
+      "detail3": "images/product/product_detail3.jpg",
+      "detailTitle1": "반짝이는 빨간 코를 가진 케이크",
+      "detailTitle2": "진한 초콜릿 풍미를 느껴보세요",
+      "detailTitle3": "크리스마스 케이크 사전 예약 안내",
+      "detailText1": "크리스마스 캐럴의 주인공이죠. 빨간 코 루돌프를 입체 케이크로 만나보세요. 루돌프 사슴 특유의 붉고 빛나는 코를 반짝이는 빨간색 오너먼트로 재현하고 ,눈과 뿔, 귀는 초콜릿으로 완성했답니다. 루돌프 코를 제외한 모든 장식을 남김없이 달콤하게 즐겨보세요.",
+      "detailText2": "속은 진한 초콜릿 풍미로 가득해요. 초코스폰지, 초코크런치, 초코크림이 부드럽게 어우러져 기분 좋은 달콤함을 선사하죠. ‘루돌프 사슴코는’ 케이크는 특별한 디자인과 함께 재미있는 식감까지 겸비했는데요. 톡톡 씹히는 초코크런치의 경쾌한 식감까지 맛있게 즐길 수 있답니다.",
+      "detailText3": "사전 예약 기간 : 22.11.24(목) ~ 22.12.18(일) 픽업 기간 : 22.12.22(목) ~ 22.12.25(일)"
     }
   ],
   "product_comments": [
@@ -50,6 +68,66 @@
       "product_post_id": "1",
       "content": "sdf",
       "title": "sdf"
+    },
+    {
+      "id": "3e4e7f91-2ef1-e8a3-1166-91a2e9f6b833",
+      "product_post_id": "1",
+      "content": "ㄴㅇㄹ",
+      "title": "ㄴㅇㄹ"
+    },
+    {
+      "id": "f2445f31-3b6c-2d21-9448-5b3f2cd2bb43",
+      "product_post_id": "1",
+      "content": "댓글 남경요",
+      "title": "신정근"
+    },
+    {
+      "id": "06d39cf7-4300-effb-7104-b8c01539e5ad",
+      "product_post_id": "1",
+      "content": "sdf",
+      "title": "sdf"
+    },
+    {
+      "id": "2980ceb6-5b79-f444-f3d6-03acdd251eb9",
+      "product_post_id": "2",
+      "content": "내욘내용",
+      "title": "프로젝트 2 "
+    },
+    {
+      "id": "b8b1c76c-05d8-cf91-7986-4a62f9487f5e",
+      "product_post_id": "2",
+      "content": "거너더라",
+      "title": "프로젝트 2 "
+    },
+    {
+      "id": "df9c9f48-0bc7-f882-9a76-4d6c7e3f793f",
+      "product_post_id": "1",
+      "content": "1111",
+      "title": "프로젝트1111"
+    },
+    {
+      "id": "6480766c-9d0e-2767-2286-9c73952d9fbb",
+      "product_post_id": "1",
+      "content": "ㄴㅇㄹ",
+      "title": "ㄴㅇㄹ"
+    },
+    {
+      "id": "fcd0b691-51d3-cf37-0cef-f50bbcd22cc5",
+      "product_post_id": "1",
+      "content": "니아ㅓㄹㄴ",
+      "title": "시정근"
+    },
+    {
+      "id": "c5d1fee0-366e-0356-39dc-f44a71591e41",
+      "product_post_id": "1",
+      "content": "ㄴㅇㄹ",
+      "title": "ㄴㅇㄹ"
+    },
+    {
+      "id": "1f456f4a-8682-f615-8d50-73fb1c34cc26",
+      "product_post_id": "2",
+      "content": "ㄴㅇㄹ",
+      "title": "ㄴㅇㄹ"
     }
   ]
 }

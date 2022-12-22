@@ -37,6 +37,7 @@
   box-sizing: border-box;
 }
 .productComment form button {
+  cursor: pointer;
   border: 1px solid #212121;
   box-sizing: border-box;
   height: 50px;
@@ -46,6 +47,7 @@
 
 .productCommentContents div {
   display: flex;
+  align-items: center;
 }
 .productCommentContents div p {
   padding-left: 10px;
@@ -57,8 +59,44 @@
   width: 200px;
   border-bottom: 2px solid #212121;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 .productCommentTitle p:last-child {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
   width: 1200px;
   border-bottom: 2px solid #212121;
+}
+.productCommentText {
+  border-bottom: 1px solid #ccc;
+}
+.productCommentText p:first-child {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  padding-bottom: 5px;
+}
+.productCommentText p:last-child {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 1200px;
+}
+.productCommentText button {
+  width: 45px;
+  height: 25px;
+}
+.productCommentText div {
+  margin-left: auto;
+}
+.productCommentText div button {
+  margin-right: 10px;
+  background: #fff;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+.productCommentText div button:hover {
+  background: #727272;
+  color: #fff;
 }
