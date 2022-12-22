@@ -8,16 +8,22 @@
   z-index: 1;
 }
 
+.background {
+  position: relative;
+}
+
 .bakery {
   width: 100%;
-  position: relative;
-  top: -6px;
+  position: absolute;
+  top: -10px;
+  overflow: hidden;
 }
 
 .wheat {
-  position: relative;
-  top: -12px;
+  position: sticky;
+  top: 100%;
   width: 100%;
+  z-index: -1;
 }
 
 .work__projects {
@@ -73,7 +79,7 @@
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   width: 25px;
   height: 2px;
   background-color: rgb(56, 52, 52);
