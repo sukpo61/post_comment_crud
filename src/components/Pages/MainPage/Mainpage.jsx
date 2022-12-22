@@ -1,60 +1,62 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 export default function Mainpage() {
   return (
     <body>
-      <p className='MainText'>
+      <p className="MainText">
         N<br />U<br />L<br />L<br />B<br />A<br />K<br />E<br />R<br />Y
       </p>
       <img
-        className='mainBread'
-        src='images/HomePageimg/changeMain.jpg'
-        alt=''
+        className="mainBread"
+        src="images/HomePageimg/changeMain.jpg"
+        alt=""
       />
-      <img className='bakery' src='images/HomePageimg/bakery.png' alt='빵집' />
-      <img className='wheat' src='images/HomePageimg/wheat.png' alt='밀밭' />
-      <div class='work__projects'>
-        <a href='#' class='project' target='blank'>
+      <img className="bakery" src="images/HomePageimg/bakery.png" alt="빵집" />
+      <img className="wheat" src="images/HomePageimg/wheat.png" alt="밀밭" />
+      <div class="work__projects">
+        <a href="#" class="project" target="blank">
           <img
-            src='images/HomePageimg/bread1.png'
-            alt='빵'
-            class='project__img'
+            src="images/HomePageimg/bread1.png"
+            alt="빵"
+            class="project__img"
           />
-          <div class='project__description'>
+          <div class="project__description">
             <h3>View more</h3>
             <span>Bread</span>
           </div>
         </a>
-        <a href='#' class='project' target='blank'>
+        <div class="project" target="blank"></div>
+        <a href="#" class="project" target="blank">
           <img
-            src='images/HomePageimg/bread2.png'
-            alt='빵'
-            class='project__img'
+            src="images/HomePageimg/bread2.png"
+            alt="빵"
+            class="project__img"
           />
-          <div class='project__description'>
+          <div class="project__description">
             <h3>View more</h3>
             <span>Bread</span>
           </div>
         </a>
-        <a href='#' class='project' target='blank'>
+        <a href="#" class="project" target="blank">
           <img
-            src='images/HomePageimg/bread3.png'
-            alt='빵'
-            class='project__img'
+            src="images/HomePageimg/bread3.png"
+            alt="빵"
+            class="project__img"
           />
-          <div class='project__description'>
+          <div class="project__description">
             <h3>View More</h3>
             <span>Bread</span>
           </div>
         </a>
-        <a href='#' class='project' target='blank'>
+        <div class="project" target="blank"></div>
+        <a href="#" class="project" target="blank">
           <img
-            src='images/HomePageimg/bread4.png'
-            alt='빵'
-            class='project__img'
+            src="images/HomePageimg/bread4.png"
+            alt="빵"
+            class="project__img"
           />
-          <div class='project__description'>
+          <div class="project__description">
             <h3>View More</h3>
             <span>Bread</span>
           </div>
