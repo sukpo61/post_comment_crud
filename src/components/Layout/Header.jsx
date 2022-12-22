@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -8,12 +8,14 @@ const Header = () => {
     <HeaderContainer>
       <Logo
         onClick={() => {
-          navigate("/");
+          navigate('/');
         }}
       >
-        Logo
+        Null
       </Logo>
       <Link to={`/addform`}> 추가하기 </Link>
+      <Link to={`/ProductPage`}> Product </Link>
+      <Link to={'/menu'}></Link>
     </HeaderContainer>
   );
 };

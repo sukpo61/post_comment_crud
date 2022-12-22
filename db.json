@@ -1,20 +1,25 @@
-{
-  "posts": [
-    {
-      "id": "319bf6f7-5ef4-b9dc-683d-100e80254639",
-      "title": "1",
-      "content": "2"
-    },
-    {
-      "id": "273f7678-17e5-ac2c-9881-8d5f61aa6705",
-      "title": "3",
-      "content": "3"
-    },
-    {
-      "id": "ae1b9422-d17e-eb8c-ac68-59f217528802",
-      "title": "4",
-      "content": "4"
-    }
-  ],
-  "comments": []
-}
+[
+  {
+    "posts": [
+      {
+        "id": "319bf6f7-5ef4-b9dc-683d-100e80254639",
+        "title": "1",
+        "content": "2"
+      },
+      {
+        "id": "273f7678-17e5-ac2c-9881-8d5f61aa6705",
+        "title": "3",
+        "content": "3"
+      },
+      {
+        "id": "ae1b9422-d17e-eb8c-ac68-59f217528802",
+        "title": "4",
+        "content": "4"
+      }
+    ],
+    "comments": [],
+    "product_post": [],
+    "product_comments": [],
+    "products": []
+  }
+]
