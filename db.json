@@ -1,10 +1,10 @@
 {
-  "author":[],
+  "author": [],
   "posts": [
     {
-      "id": "b97da4a6-4f3f-aee3-4e59-914a7d9f65db",
-      "title": "sdfsdf",
-      "content": "sfsdfsdf"
+      "id": "8a70cdfe-2482-e372-a6a5-caf17ba55bfd",
+      "title": "ㄴㅇㄹㄴㅇㄹ",
+      "content": "ㄴㄹㄴㅇㄹㄴㅇㄹ"
     }
   ],
   "comments": [
@@ -21,8 +21,6 @@
       "toggledisplay": true
     }
   ],
-  "product_post": [
-  ],
-  "product_comments":[]
-  
-} 
+  "product_post": [],
+  "product_comments": []
+}

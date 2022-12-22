@@ -52,7 +52,9 @@ const PostAddForm = () => {
 };
 
 const AddWrap = styled.div`
-  width: 100%;
+  width: 1000px;
+  min-width: 500px;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
 `;

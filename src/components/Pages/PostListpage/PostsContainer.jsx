@@ -25,7 +25,10 @@ const PostsContainer = () => {
 export default PostsContainer;
 
 const CommentsWrap = styled.div`
-  width: 100%;
-  display: flex;
+  width: 1000px;
+  min-width: 500px;
+  margin: 100px auto;
+    display: flex;
   flex-direction: column;
 `;
+

@@ -32,8 +32,12 @@ const Postpage = () => {
   );
 };
 
+
+
 const PostpageWrap = styled.div`
-  width: 100%;
+  width: 1000px;
+  min-width: 500px;
+  margin: 100px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,11 +45,21 @@ const PostpageWrap = styled.div`
   gap: 20px;
 `;
 
-const PostWrap = styled.div`
+
+const PostButtonWrap = styled.div`
   width: 100%;
   height: 300px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+`;
+
+const PostWrap = styled.div`
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center
   justify-content: center;
   gap: 20px;
 `;
