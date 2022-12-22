@@ -6,17 +6,23 @@
       "content": "2"
     },
     {
-      "id": "273f7678-17e5-ac2c-9881-8d5f61aa6705",
-      "title": "3",
-      "content": "3"
-    },
-    {
       "id": "ae1b9422-d17e-eb8c-ac68-59f217528802",
       "title": "4",
-      "content": "4"
+      "content": "4d"
     }
   ],
   "comments": [],
-  "product_contents": [],
+  "product_posts": [
+    {
+      "id": "1",
+      "title": "빵빵빵",
+      "content": "내용내용내용"
+    },
+    {
+      "id": "2",
+      "title": "빵빵빵2",
+      "content": "내용내용내용2"
+    }
+  ],
   "product_comments": []
 }
