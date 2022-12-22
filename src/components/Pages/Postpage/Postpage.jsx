@@ -12,10 +12,10 @@ import { __deletePost, __updatePost } from "../../../redux/modules/posts";
 
 const Postpage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { posts } = useSelector((state) => state.posts);
   const param = useParams();
   const post = posts.find((post) => post.id === param.id);
-  const navigate = useNavigate();
 
 
   useEffect(() => {
