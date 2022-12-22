@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.Headerbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.HeaderLogo {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 80px;
+}
+
+.Hambuger {
+  margin-right: 40px;
+}
+
+.mainBread {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e3d1b3;
+  width: 100%;
+  padding: 20px 0;
+}
+.footer__p {
+  margin-top: 30px;
+}
