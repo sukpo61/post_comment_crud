@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
 .Headerbox {
   display: flex;
   justify-content: space-between;
