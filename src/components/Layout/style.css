@@ -1,0 +1,16 @@
+.Headerbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.HeaderLogo {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 80px;
+}
+
+.Hambuger {
+  margin-right: 40px;
+}
