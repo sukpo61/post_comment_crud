@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
+import "./style.css";
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <div className="footer">
       <img
-        className='footer__img'
-        src='images/HomePageimg/Logo.png'
-        alt='로고'
+        className="footer__img"
+        src="images/HomePageimg/Logo.png"
+        alt="로고"
       />
-      <p className='footer__p'>
+      <p className="footer__p">
         이용약관 ㅣ 개인정보 처리방침 ㅣ 인재채용 ㅣ 협력 및 제안 문의
       </p>
       <p>
