@@ -18,14 +18,12 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Header></Header>
-      <Wrap>
-        <Routes>
-          <Route path="/" element={<PostsContainer />} />
-          <Route path="/addform" element={<PostAddForm />} />
-          <Route path="/editform" element={<PostEditForm />} />
-          <Route path="/:id" element={<Postpage />} />
-        </Routes>
-      </Wrap>
+      <Routes>
+        <Route path="/" element={<PostsContainer />} />
+        <Route path="/addform" element={<PostAddForm />} />
+        <Route path="/editform" element={<PostEditForm />} />
+        <Route path="/:id" element={<Postpage />} />
+      </Routes>
     </BrowserRouter>
   );
 };

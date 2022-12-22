@@ -11,9 +11,12 @@ const Header = () => {
           navigate("/");
         }}
       >
-        Logo
+        <img src="../components/images/HomePageimg/Logo.jpg" alt="" />
       </Logo>
-      <Link to={`/addform`}> 추가하기 </Link>
+      <Link to={`/addform`}>
+        {" "}
+        <i class="fa-solid fa-bars"></i>{" "}
+      </Link>
     </HeaderContainer>
   );
 };
