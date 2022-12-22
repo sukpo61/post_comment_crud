@@ -4,7 +4,10 @@ import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 import CommentAddForm from "./CommentAddForm";
 import CommentsContainer from "./CommentsContainer";
-import { __getComment } from "../../../redux/modules/comments";
+import {
+  __getComment,
+  __deleteAllComment,
+} from "../../../redux/modules/comments";
 import { __getPost } from "../../../redux/modules/posts";
 import { useLocation, useNavigate } from "react-router-dom";
 import { __deletePost, __updatePost } from "../../../redux/modules/posts";
@@ -23,7 +26,7 @@ const Postpage = () => {
   }, [dispatch]);
 
   const DeletePost = () => {
-    // dispatch(__deleteAllComment(post.id));
+    dispatch(__deleteAllComment(post.id));
 
     // console.log(post.id);
     dispatch(__deletePost(post.id));
