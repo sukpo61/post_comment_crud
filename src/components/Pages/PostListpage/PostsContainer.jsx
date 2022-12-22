@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { __getPost } from "../../../redux/modules/posts";
 import { useLocation, useNavigate } from "react-router-dom";
 
-
 const PostsContainer = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,12 +18,14 @@ const PostsContainer = () => {
   return (
     <CommentsWrap>
       <PostButtonWrap>
-
- <CusttomButton onClick={()=>{
-navigate("/addform")
- }}>추가</CusttomButton>
-
- </PostButtonWrap>
+        <CusttomButton
+          onClick={() => {
+            navigate("/addform");
+          }}
+        >
+          추가
+        </CusttomButton>
+      </PostButtonWrap>
 
       {posts.map((post) => {
         return <PostContainer key={post.id} post={post}></PostContainer>;
