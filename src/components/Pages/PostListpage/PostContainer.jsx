@@ -15,19 +15,6 @@ const PostContainer = ({ post }) => {
 
   const { comments } = useSelector((state) => state.comments);
 
-  const DeletePost = () => {
-    // dispatch(__deleteAllComment(post.id));
-
-    // console.log(post.id);
-    dispatch(__deletePost(post.id));
-  };
-
-  const EditPost = () => {
-    navigate("/editform", {
-      state: post,
-    });
-  };
-
   return (
     <CommentWrap>
       <ContentsWrap>
@@ -38,8 +25,6 @@ const PostContainer = ({ post }) => {
         <CusttomButton>
           <Link to={`/${post.id}`}>보기</Link>
         </CusttomButton>
-        <CusttomButton onClick={DeletePost}>삭제</CusttomButton>
-        <CusttomButton onClick={EditPost}>수정</CusttomButton>
       </ButtonWrap>
     </CommentWrap>
   );
