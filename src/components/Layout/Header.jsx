@@ -14,6 +14,7 @@ const Header = () => {
         Logo
       </Logo>
       <Link to={`/addform`}> 추가하기 </Link>
+      <Link to={`/ProductPage`}> Product </Link>
     </HeaderContainer>
   );
 };

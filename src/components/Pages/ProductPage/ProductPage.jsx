@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 import { __getProductpost } from "../../../redux/modules/productposts";
-import { __getPost } from "../../../redux/modules/posts";
+import "./ProductPage.css";
 
 const Postpage = () => {
   const dispatch = useDispatch();
@@ -11,43 +10,69 @@ const Postpage = () => {
     return state.product_posts;
   });
 
-  console.log(product_posts);
   //   const param = useParams();
   const product_post = product_posts.find((t) => t.id === "1");
 
   useEffect(() => {
     dispatch(__getProductpost());
-    dispatch(__getPost());
   }, [dispatch]);
   return (
-    <PostpageWrap>
-      <PostWrap>
-        <div>{product_post?.title}</div>
-        <div>{product_post?.content}</div>
-        <Link to={`/`}>
-          <span>돌아가기</span>
-        </Link>
-      </PostWrap>
-    </PostpageWrap>
+    <div className="product">
+      <div className="product_visual">
+        {/* 메인 이미지 */}
+        <div className="product_visual_img">
+          <img src={product_post?.img} />
+        </div>
+        <div className="product_visual_text">
+          {/* 메인 비주얼 왼쪽 텍스트 */}
+          <div>
+            <h2>
+              {product_post?.title}
+              <br />
+              <span>{product_post?.engtitle}</span>
+            </h2>
+            <div>
+              <h3>Price</h3>
+              <p>{product_post?.price}</p>
+              <button>Reservation</button>
+            </div>
+          </div>
+          {/* 메인 비주얼 오른쪽 텍스트 */}
+          <div>
+            <p>{product_post?.titleKrText}</p>
+            <p>{product_post?.titleEnText}</p>
+          </div>
+        </div>
+      </div>
+      {/* 상세페이지*/}
+      <div className="product_contents">
+        <div>
+          <div className="product_box">
+            <span>
+              <img src={product_post?.detail1} />
+            </span>
+            <h2>{product_post?.detailTitle1}</h2>
+            <p>{product_post?.detailText1}</p>
+          </div>
+          <div className="product_box">
+            <span>
+              <img src={product_post?.detail3} />
+            </span>
+            <h2>{product_post?.detailTitle3}</h2>
+            <p>{product_post?.detailText3}</p>
+          </div>
+        </div>
+        <div>
+          <div className="product_box product_right_box">
+            <span>
+              <img src={product_post?.detail2} />
+            </span>
+            <h2>{product_post?.detailTitle2}</h2>
+            <p>{product_post?.detailText2}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
-
-const PostpageWrap = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-`;
-
-const PostWrap = styled.div`
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-`;
-
 export default Postpage;
