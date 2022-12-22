@@ -1,41 +1,23 @@
 import React from "react";
-import styled from "styled-components";
-import { Link, useNavigate } from "react-router-dom";
+import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <HeaderContainer>
-      <Logo
+    <header className="Headerbox">
+      <div
         onClick={() => {
           navigate("/");
         }}
       >
-        <img src="../components/images/HomePageimg/Logo.jpg" alt="" />
-      </Logo>
-      <Link to={`/addform`}>
-        {" "}
-        <i class="fa-solid fa-bars"></i>{" "}
-      </Link>
-    </HeaderContainer>
+        <img className="HeaderLogo" src="images/HomePageimg/Logo.jpg" alt="" />
+      </div>
+      <div className="Hambuger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
   );
 };
-
-const Logo = styled.div`
-  cursor: pointer;
-  font-size: 40px;
-`;
-
-const HeaderContainer = styled.div`
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  background-color: white;
-  border-bottom: 1px solid #eee;
-`;
 
 export default Header;
