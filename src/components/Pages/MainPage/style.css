@@ -1,8 +1,11 @@
 .MainText {
   position: fixed;
   left: 50%;
-  margin-top: 200px;
+  margin-top: 250px;
   font-size: 35px;
   font-weight: bold;
   transform: translateX(-50%);
+}
+
+.viewMoreBox > img {
 }
