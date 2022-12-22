@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { __getProductpost } from "../../../redux/modules/productposts";
+import ProductComment from "./ProductComment";
 import "./ProductPage.css";
 
 const Postpage = () => {
@@ -73,6 +74,7 @@ const Postpage = () => {
             </div>
           </div>
         </div>
+        <ProductComment product_post_id={product_post?.id} />
       </div>
     </div>
   );
