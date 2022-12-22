@@ -6,6 +6,7 @@ import Header from "../components/Layout/Header";
 import PostAddForm from "../components/Pages/PostAddpage/PostAddForm";
 import Postpage from "../components/Pages/Postpage/Postpage";
 import PostEditForm from "../components/Pages/PostEditpage/PostEditForm";
+import Footer from "../components/Layout/Footer";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/editform" element={<PostEditForm />} />
         <Route path="/:id" element={<Postpage />} />
       </Routes>
+      <Footer></Footer>
     </BrowserRouter>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./Header.css";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
           navigate("/");
         }}
       >
-        <img className="HeaderLogo" src="images/HomePageimg/Logo.jpg" alt="" />
+        <img className="HeaderLogo" src="images/HomePageimg/Logo.png" alt="" />
       </div>
       <div className="Hambuger">
         <i class="fa-solid fa-bars"></i>

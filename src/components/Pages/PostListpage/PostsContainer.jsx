@@ -4,6 +4,7 @@ import PostContainer from "./PostContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { __getPost } from "../../../redux/modules/posts";
 import { useLocation, useNavigate } from "react-router-dom";
+import Reservation_Topimage from "../../Layout/Reservation_Topimage";
 
 const PostsContainer = () => {
   const dispatch = useDispatch();

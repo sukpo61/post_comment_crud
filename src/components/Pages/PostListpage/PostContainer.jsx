@@ -21,7 +21,7 @@ const PostContainer = ({ post }) => {
       <TableTd Width="560px">
         <span
           onClick={() => {
-            navigate();
+            navigate(`/${post.id}`);
           }}
         >
           {post.title}
@@ -52,6 +52,10 @@ const TableTd = styled.div`
   font-size: 14px;
   span{
     margin-left:20px
+  }
+  span:hover{
+    text-decoration: underline;
+    cursor: pointer;
   }
 `;
 
