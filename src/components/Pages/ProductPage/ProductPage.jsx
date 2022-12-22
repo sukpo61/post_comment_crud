@@ -11,6 +11,7 @@ const Postpage = () => {
     return state.product_posts;
   });
 
+  console.log(product_posts);
   //   const param = useParams();
   const product_post = product_posts.find((t) => t.id === "1");
 
