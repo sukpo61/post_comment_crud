@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.Headerbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+
+.HeaderLogo {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 80px;
+}
+
+.Hambuger {
+  margin-right: 40px;
+}
+
+.mainBread {
+  width: 100%;
+}
