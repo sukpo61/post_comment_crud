@@ -22,9 +22,26 @@ const PostsContainer = () => {
         <Title>Reservation</Title>
       </TopimgWrap>
       <CommentsWrap>
+        <TableHeader>
+          <HeaderTh Width="80px">번호</HeaderTh>
+          <HeaderTh Width="560px">제목</HeaderTh>
+          <HeaderTh Width="100px">상태</HeaderTh>
+          <HeaderTh Width="130px">작성자</HeaderTh>
+          <HeaderTh Width="130px">작성일</HeaderTh>
+        </TableHeader>
         {posts.map((post) => {
           return <PostContainer key={post.id} post={post}></PostContainer>;
         })}
+        <PageNumberWrap>
+          <PageNumber>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+          </PageNumber>
+        </PageNumberWrap>
+
         <PostButtonWrap>
           <CusttomButton
             onClick={() => {
@@ -41,9 +58,38 @@ const PostsContainer = () => {
 
 export default PostsContainer;
 
+const PageNumberWrap = styled.div`
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const PageNumber = styled.div`
+  span {
+    width: 20px;
+    height: 20px;
+    margin: 0 7px;
+    font-size: 15px;
+  }
+`;
+
 const TableHeader = styled.div`
-height:50px;
-bord`;
+  height: 50px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  display: flex;
+  flex-direction: row;
+`;
+
+const HeaderTh = styled.div`
+  width: ${(props) => props.Width};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-weight: 400;
+  font-size: 14px;
+`;
 
 const Title = styled.div`
   position: relative;
@@ -90,13 +136,18 @@ const PostButtonWrap = styled.div`
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  flex-direction: row-reverse;
 `;
 
 const CusttomButton = styled.button`
-  width: 50px;
+  width: 60px;
   height: 30px;
   cursor: pointer;
-  border: 1px solid #eee;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #fbf9f6;
+  background: #d3c1b3;
+  border-radius: 15px;
 `;

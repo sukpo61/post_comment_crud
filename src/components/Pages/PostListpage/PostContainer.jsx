@@ -17,42 +17,51 @@ const PostContainer = ({ post }) => {
 
   return (
     <CommentWrap>
-      <ContentsWrap>
-        <TitleWrap>{post.title}</TitleWrap>
-        <div>{post.content}</div>
-      </ContentsWrap>
-      <ButtonWrap>
-        <CusttomButton>
-          <Link to={`/${post.id}`}>보기</Link>
-        </CusttomButton>
-      </ButtonWrap>
+      <TableTd Width="80px"></TableTd>
+      <TableTd Width="560px">
+        <span
+          onClick={() => {
+            navigate();
+          }}
+        >
+          {post.title}
+        </span>
+      </TableTd>
+      <TableTd Width="100px"></TableTd>
+      <TableTd Width="130px"></TableTd>
+      <TableTd Width="130px"></TableTd>
     </CommentWrap>
   );
 };
 
 const ContentsWrap = styled.div`
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
 `;
 
-const TitleWrap = styled(ContentsWrap)`
-  width: 80px;
-  justify-content: center;
+const TableTd = styled.div`
+  width: ${(props) => props.Width};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left:${(props) => props.Padleft}
+  height: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  span{
+    margin-left:20px
+  }
 `;
-
-const ButtonWrap = styled(ContentsWrap)``;
 
 const CommentWrap = styled.div`
   width: 100%;
-  height: 100px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
   border-bottom: 1px solid #eee;
 `;
 
