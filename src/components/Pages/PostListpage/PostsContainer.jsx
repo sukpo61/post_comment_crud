@@ -22,6 +22,9 @@ const PostsContainer = () => {
         <Title>Reservation</Title>
       </TopimgWrap>
       <CommentsWrap>
+        {posts.map((post) => {
+          return <PostContainer key={post.id} post={post}></PostContainer>;
+        })}
         <PostButtonWrap>
           <CusttomButton
             onClick={() => {
@@ -31,10 +34,6 @@ const PostsContainer = () => {
             추가
           </CusttomButton>
         </PostButtonWrap>
-
-        {posts.map((post) => {
-          return <PostContainer key={post.id} post={post}></PostContainer>;
-        })}
       </CommentsWrap>
     </PostsWrap>
   );
@@ -42,11 +41,15 @@ const PostsContainer = () => {
 
 export default PostsContainer;
 
+const TableHeader = styled.div`
+height:50px;
+bord`;
+
 const Title = styled.div`
   position: relative;
   margin: 0 auto;
   top: -30%;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 40px;
