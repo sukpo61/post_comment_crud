@@ -12,6 +12,7 @@ export default function Mainpage() {
         src='images/HomePageimg/changeMain.jpg'
         alt=''
       />
+      <img className='bakery' src='images/HomePageimg/bakery.png' alt='빵집' />
       <img className='wheat' src='images/HomePageimg/wheat.png' alt='밀밭' />
       <div class='work__projects'>
         <a href='#' class='project' target='blank'>

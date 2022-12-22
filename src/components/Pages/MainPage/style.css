@@ -8,9 +8,15 @@
   z-index: 1;
 }
 
+.bakery {
+  width: 100%;
+  position: relative;
+  top: -6px;
+}
+
 .wheat {
   position: relative;
-  top: -8px;
+  top: -12px;
   width: 100%;
 }
 
