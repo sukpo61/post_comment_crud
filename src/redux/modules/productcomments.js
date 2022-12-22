@@ -47,10 +47,10 @@ export const __deleteAllproduct_comments = createAsyncThunk(
     try {
       let data = await axios.get("http://localhost:3003/product_comments");
 
-      for (var comment of data.data) {
-        if (comment.post_id === payload) {
+      for (var product_comments of data.data) {
+        if (product_comments.product_post_id === payload) {
           await axios.delete(
-            `http://localhost:3003/product_comments/${comment.id}`
+            `http://localhost:3003/product_comments/${product_comments.id}`
           );
         }
       }

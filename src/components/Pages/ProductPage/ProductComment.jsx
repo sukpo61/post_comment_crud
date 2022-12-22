@@ -31,11 +31,16 @@ const ProductComment = (props) => {
           <p>{t.content}</p>
           <div>
             <button>수정</button>
-            <button>삭제</button>
+            <button onClick="DeletePost">삭제</button>
           </div>
         </div>
       );
     });
+
+  const DeletePost = () => {
+    dispatch(__deleteAllproduct_comments(product_comment.id));
+    dispatch(__deleteproduct_comments(product_comment.id));
+  };
 
   useEffect(() => {
     dispatch(__getproduct_comments());
