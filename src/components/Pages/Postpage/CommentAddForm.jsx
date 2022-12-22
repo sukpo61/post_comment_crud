@@ -45,6 +45,7 @@ const AddWrap = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 `;
 
 const Form = styled.form`
@@ -56,11 +57,11 @@ const Form = styled.form`
 
 const Input = styled.input`
   border: 1px solid #eee;
-  height: 25px;
-  width: 90%;
-  border-radius: 12px;
+  height: 30px;
+  width: 88%;
+  border-radius: 15px;
   outline: none;
-  padding: 0 10px;
+  padding: 0 20px;
 `;
 
 export default CommentAddForm;

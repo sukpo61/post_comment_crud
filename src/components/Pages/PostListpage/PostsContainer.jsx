@@ -18,10 +18,7 @@ const PostsContainer = () => {
 
   return (
     <PostsWrap>
-      <TopimgWrap>
-        <Topimg></Topimg>
-        <Title>Reservation</Title>
-      </TopimgWrap>
+      <Reservation_Topimage></Reservation_Topimage>
       <CommentsWrap>
         <TableHeader>
           <HeaderTh Width="80px">번호</HeaderTh>

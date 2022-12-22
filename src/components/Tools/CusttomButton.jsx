@@ -6,10 +6,16 @@ const CusttomButton = (props) => {
 };
 
 const Button = styled.button`
-  width: 50px;
+  margin: ${(props) => props.Margin};
+  width: 65px;
   height: 30px;
   cursor: pointer;
-  border: 1px solid #eee;
+  border: 0.5px solid #a5a5a5;
+  border-radius: 30px;
+  font-weight: 200;
+  font-size: 12px;
+
+  color: #000000;
 `;
 
 export default CusttomButton;

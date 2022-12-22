@@ -59,22 +59,29 @@ const CommentContainer = ({ post }) => {
   return (
     <CommentWrap>
       <ContentsWrap>
-        {post.toggledisplay ? (
-          <div>{post.content}</div>
-        ) : (
-          <ContentsWrap>
-            <ContentInput
-              type="text"
-              value={content}
-              onChange={(e) => {
-                setContent(e.target.value);
-              }}
-            />
-            {/* 직전값 */}
-            <CusttomButton onClick={UpdateComment}>완료</CusttomButton>
-            <CusttomButton onClick={ToggleComment}>취소</CusttomButton>
-          </ContentsWrap>
-        )}
+        <User>asdasdf</User>
+        <div>
+          {post.toggledisplay ? (
+            <div>{post.content}</div>
+          ) : (
+            <ContentInputWrap>
+              <ContentInput
+                type="text"
+                value={content}
+                onChange={(e) => {
+                  setContent(e.target.value);
+                }}
+              />
+              {/* 직전값 */}
+              <CusttomButton onClick={UpdateComment}>완료</CusttomButton>
+              <CusttomButton onClick={ToggleComment}>취소</CusttomButton>
+            </ContentInputWrap>
+          )}
+        </div>
+        <CommentInfoWrap>
+          <Time>12</Time>
+          <Time>233</Time>
+        </CommentInfoWrap>
       </ContentsWrap>
       <ButtonWrap>
         <CusttomButton onClick={DeleteConmment} className="DeleteButton">
@@ -93,25 +100,49 @@ const CommentContainer = ({ post }) => {
   );
 };
 
+const Time = styled.span`
+  font-weight: 300;
+  font-size: 12px;
+  color: #727272;
+`;
+
+const CommentInfoWrap = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+const User = styled.span`
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+`;
+
 const ContentsWrap = styled.div`
-  height: 100px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+const ContentInputWrap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
+  margin-top: 10px;
 `;
 
 const ButtonWrap = styled(ContentsWrap)``;
 
 const CommentWrap = styled.div`
   width: 100%;
-  height: 100px;
+  height: 84px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   gap: 20px;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
 `;
 
 const CusttomButton = styled.button`
