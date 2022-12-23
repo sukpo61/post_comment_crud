@@ -5,6 +5,7 @@ import { __addPost } from "../../../redux/modules/posts";
 import uuid from "react-uuid";
 import { useNavigate } from "react-router-dom";
 import Reservation_Topimage from "../../Layout/Reservation_Topimage";
+import PostTime from "../../Layout/Time";
 
 const PostAddForm = () => {
   const [title, setTitle] = useState("");
@@ -12,9 +13,18 @@ const PostAddForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const dateinfo = new Date();
+  const hours = ("0" + dateinfo.getHours()).slice(-2);
+  const minutes = ("0" + dateinfo.getMinutes()).slice(-2);
+
+  const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
+  const time = hours + ":" + minutes;
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (title == "" || content == "") return; // 아무것도 입력하지 않았을 때 dispatch 하지 않음
+
+    console.log(PostTime);
 
     let NewID = uuid();
 
@@ -22,7 +32,11 @@ const PostAddForm = () => {
       id: NewID,
       title,
       content,
+      date,
+      time,
     };
+
+    console.log(NewData);
 
     dispatch(__addPost(NewData));
     setTitle("");

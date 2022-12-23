@@ -65,7 +65,7 @@ const Postpage = () => {
           </PostTitle>
           <PostInfoContainer>
             <span>작성일</span>
-            <PostInfo>2022-12-22</PostInfo>
+            <PostInfo>{post?.date}</PostInfo>
             <span>작성자</span>
             <PostInfo>루돌프</PostInfo>
           </PostInfoContainer>
@@ -129,7 +129,6 @@ const CusttomButton = styled.button`
   border-radius: 30px;
   font-weight: 200;
   font-size: 12px;
-
   color: #000000;
 `;
 const ListButton = styled.button`

@@ -59,7 +59,7 @@ const CommentContainer = ({ post }) => {
   return (
     <CommentWrap>
       <ContentsWrap>
-        <User>asdasdf</User>
+        <User>닉네임 없음</User>
         <div>
           {post.toggledisplay ? (
             <ContentInputWrap>{post.content}</ContentInputWrap>
@@ -79,8 +79,8 @@ const CommentContainer = ({ post }) => {
           )}
         </div>
         <CommentInfoWrap>
-          <Time>12</Time>
-          <Time>233</Time>
+          <Time>{post?.date}</Time>
+          <Time>{post?.time}</Time>
         </CommentInfoWrap>
       </ContentsWrap>
       <ButtonWrap>

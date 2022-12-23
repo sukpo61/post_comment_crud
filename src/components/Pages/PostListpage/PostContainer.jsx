@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,15 +9,25 @@ import {
   __getComment,
 } from "../../../redux/modules/comments";
 
-const PostContainer = ({ post }) => {
+const PostContainer = ({ post, index }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    dispatch(__getComment());
+  }, [dispatch]);
+
   const { comments } = useSelector((state) => state.comments);
+
+  const comment_len = comments.filter(
+    (comment) => comment.post_id === post.id
+  ).length;
 
   return (
     <CommentWrap>
-      <TableTd Width="80px"></TableTd>
+      <TableTd Width="80px" Position="center">
+        {index}
+      </TableTd>
       <TableTd Width="560px">
         <span
           onClick={() => {
@@ -27,12 +37,38 @@ const PostContainer = ({ post }) => {
           {post.title}
         </span>
       </TableTd>
-      <TableTd Width="100px"></TableTd>
+      <TableTd Width="100px" Position="center">
+        {comment_len === 0 ? (
+          <Resered>예약중</Resered>
+        ) : (
+          <ReserDone>완료</ReserDone>
+        )}
+      </TableTd>
       <TableTd Width="130px"></TableTd>
-      <TableTd Width="130px"></TableTd>
+      <TableTd Width="130px" Position="center">
+        {post.date}
+      </TableTd>
     </CommentWrap>
   );
 };
+const Resered = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+  width: 60px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fbf9f6;
+  background: #d3c1b3;
+  border-radius: 15px;
+`;
+
+const ReserDone = styled(Resered)`
+  color: #a07c5f;
+  background: #edeae3;
+`;
 
 const ContentsWrap = styled.div`
   height: 50px;
@@ -45,15 +81,14 @@ const TableTd = styled.div`
   width: ${(props) => props.Width};
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left:${(props) => props.Padleft}
+  justify-content: ${(props) => props.Position};
   height: 50px;
   font-weight: 400;
   font-size: 14px;
-  span{
-    margin-left:20px
+  span {
+    margin-left: 20px;
   }
-  span:hover{
+  span:hover {
     text-decoration: underline;
     cursor: pointer;
   }

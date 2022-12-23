@@ -27,8 +27,14 @@ const PostsContainer = () => {
           <HeaderTh Width="130px">작성자</HeaderTh>
           <HeaderTh Width="130px">작성일</HeaderTh>
         </TableHeader>
-        {posts.map((post) => {
-          return <PostContainer key={post.id} post={post}></PostContainer>;
+        {posts.map((post, index) => {
+          return (
+            <PostContainer
+              key={post.id}
+              post={post}
+              index={index + 1}
+            ></PostContainer>
+          );
         })}
         <PageNumberWrap>
           <PageNumber>
@@ -46,7 +52,7 @@ const PostsContainer = () => {
               navigate("/addform");
             }}
           >
-            추가
+            예약
           </CusttomButton>
         </PostButtonWrap>
       </CommentsWrap>
@@ -131,10 +137,10 @@ const CommentsWrap = styled.div`
 
 const PostButtonWrap = styled.div`
   width: 100%;
-  height: 100px;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
+  margin-bottom: 40px;
 `;
 
 const CusttomButton = styled.button`
