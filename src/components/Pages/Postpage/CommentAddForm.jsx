@@ -16,12 +16,26 @@ const CommentAddForm = (props) => {
   const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
   const time = hours + ":" + minutes;
 
+  const NameArray = [
+    "아드리아",
+    "제이슨",
+    "워익",
+    "넨마스터",
+    "나이트엘프",
+    "해루석",
+    "키아나",
+    "고뭉치",
+  ];
+
+  const randomName = NameArray[Math.floor(Math.random() * NameArray.length)];
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (content == "") return; // 아무것도 입력하지 않았을 때 dispatch 하지 않음
 
     let NewData = {
       id: uuid(),
+      name: randomName,
       post_id: props.post_id,
       content,
       toggledisplay: true,

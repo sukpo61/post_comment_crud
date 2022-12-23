@@ -67,7 +67,7 @@ const Postpage = () => {
             <span>작성일</span>
             <PostInfo>{post?.date}</PostInfo>
             <span>작성자</span>
-            <PostInfo>루돌프</PostInfo>
+            <PostInfo>{post?.name}</PostInfo>
           </PostInfoContainer>
         </TableHeader>
 

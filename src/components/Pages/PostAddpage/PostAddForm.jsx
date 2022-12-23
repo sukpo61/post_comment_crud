@@ -20,6 +20,19 @@ const PostAddForm = () => {
   const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
   const time = hours + ":" + minutes;
 
+  const NameArray = [
+    "아드리아",
+    "제이슨",
+    "워익",
+    "넨마스터",
+    "나이트엘프",
+    "해루석",
+    "키아나",
+    "고뭉치",
+  ];
+
+  const randomName = NameArray[Math.floor(Math.random() * NameArray.length)];
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (title == "" || content == "") return; // 아무것도 입력하지 않았을 때 dispatch 하지 않음
@@ -30,6 +43,7 @@ const PostAddForm = () => {
 
     let NewData = {
       id: NewID,
+      name: randomName,
       title,
       content,
       date,

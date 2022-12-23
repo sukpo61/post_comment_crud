@@ -44,7 +44,9 @@ const PostContainer = ({ post, index }) => {
           <ReserDone>완료</ReserDone>
         )}
       </TableTd>
-      <TableTd Width="130px"></TableTd>
+      <TableTd Width="130px" Position="center">
+        {post.name}
+      </TableTd>
       <TableTd Width="130px" Position="center">
         {post.date}
       </TableTd>

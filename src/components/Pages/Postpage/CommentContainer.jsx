@@ -59,7 +59,7 @@ const CommentContainer = ({ post }) => {
   return (
     <CommentWrap>
       <ContentsWrap>
-        <User>닉네임 없음</User>
+        <User>{post?.name}</User>
         <div>
           {post.toggledisplay ? (
             <ContentInputWrap>{post.content}</ContentInputWrap>

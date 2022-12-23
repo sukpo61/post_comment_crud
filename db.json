@@ -2,21 +2,31 @@
   "author": [],
   "posts": [
     {
-      "id": "9477d48e-a90b-8552-ad9a-c82ce49de9a6",
-      "title": "sdf",
-      "content": "sdfsdfsf",
+      "id": "49eae918-3b84-d011-e6a4-96d67dc1dd06",
+      "name": "해루석",
+      "title": "ㄹㅇㄴㄹ",
+      "content": "ㄹㅇㄴㄹㄴㅇ",
       "date": "2022.12. 23.",
-      "time": "14:01"
+      "time": "14:59"
+    },
+    {
+      "id": "095f2330-23c0-319f-7b63-cbe4913a16b9",
+      "name": "키아나",
+      "title": "ㅁㄴㅇㄹㄴㅇ",
+      "content": "ㄹㄴㅇㄹㄴㅇㄹㅇ",
+      "date": "2022.12. 23.",
+      "time": "15:00"
     }
   ],
   "comments": [
     {
-      "id": "f1dd669e-defa-de63-92ea-8e82c3a73fbd",
-      "post_id": "9477d48e-a90b-8552-ad9a-c82ce49de9a6",
-      "content": "sdfsdf",
+      "id": "e031f272-2f96-2985-6892-b06d10613c17",
+      "name": "고뭉치",
+      "post_id": "095f2330-23c0-319f-7b63-cbe4913a16b9",
+      "content": "ㄹㄴㅇㄹㄴㅇㄹㄴ",
       "toggledisplay": true,
       "date": "2022.12. 23.",
-      "time": "14:02"
+      "time": "15:02"
     }
   ],
   "product_post": [],
