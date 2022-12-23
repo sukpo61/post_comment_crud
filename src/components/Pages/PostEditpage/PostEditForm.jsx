@@ -27,7 +27,7 @@ const PostEditForm = () => {
     setTitle("");
     setContent("");
 
-    navigate("/");
+    navigate(`/${state.id}`);
   };
 
   return (
@@ -40,6 +40,7 @@ const PostEditForm = () => {
         <Form onSubmit={onSubmitHandler}>
           <TitleInput
             className="title"
+            placeholder="제목을 입력하세요"
             type="text"
             value={title}
             onChange={(e) => {
@@ -47,25 +48,37 @@ const PostEditForm = () => {
             }}
           />
           <ContentInput
+            placeholder="주소와 내용을 입력하세요"
             type="text"
             value={content}
             onChange={(e) => {
               setContent(e.target.value);
             }}
           />
-          <CusttomButton>수정</CusttomButton>
+          <PostButtonWrap>
+            <CusttomButton>수정</CusttomButton>
+            <CusttomButton
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              취소
+            </CusttomButton>
+          </PostButtonWrap>{" "}
         </Form>
-        <CusttomButton
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          취소
-        </CusttomButton>
       </AddWrap>
     </Wrap>
   );
 };
+
+const PostButtonWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  margin-top: 15px;
+`;
+
 const TableHeader = styled.div`
   height: 100px;
   width: 100%;
@@ -112,28 +125,30 @@ const Form = styled.form`
 
 const TitleInput = styled.input`
   border: 1px solid #eee;
-  margin-top: 50px;
+  margin-top: 20px;
   height: 25px;
-  width: 100%;
-  outline: none;
-`;
-
-const ContentInput = styled.textarea`
-  border: 1px solid #eee;
-  margin-top: 50px;
-  height: 500px;
-  width: 100%;
-  border-radius: 12px;
   outline: none;
   padding: 0 10px;
 `;
 
+const ContentInput = styled.textarea`
+  border: 1px solid #eee;
+  margin-top: 20px;
+  height: 300px;
+  outline: none;
+  padding: 10px 10px;
+`;
+
 const CusttomButton = styled.button`
-  margin-top: 10px;
-  width: 50px;
+  margin: ${(props) => props.Margin};
+  width: 65px;
   height: 30px;
   cursor: pointer;
-  border: 1px solid #eee;
+  border: 0.5px solid #a5a5a5;
+  border-radius: 30px;
+  font-weight: 200;
+  font-size: 12px;
+  color: #000000;
 `;
 
 export default PostEditForm;

@@ -137,7 +137,6 @@ const ButtonWrap = styled(ContentsWrap)``;
 
 const CommentWrap = styled.div`
   padding: 0 20px;
-  width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -159,7 +158,6 @@ const ContentInput = styled.input`
   height: 20px;
   width: 500px;
   outline: none;
-  padding: 0 10px;
 `;
 
 export default CommentContainer;

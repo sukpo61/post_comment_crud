@@ -2,25 +2,27 @@
   "author": [],
   "posts": [
     {
-      "id": "7968b5c9-ba87-8485-935d-13db8c64ba0a",
-      "title": "가나다라마",
-      "content": "자차카타파하"
-    }
-  ],
-  "comments": [
-    {
-      "id": "e401cde9-7e60-a06d-1d32-bae613890279",
-      "post_id": "7968b5c9-ba87-8485-935d-13db8c64ba0a",
-      "content": "ㄹㅇㄴㅁㄻㄴㅇ",
-      "toggledisplay": true
+      "id": "df3c3164-400f-8921-668b-3aad0a089c61",
+      "title": "6",
+      "content": "6"
     },
     {
-      "id": "b48921b1-035b-2fb2-9c09-33ce4dcd805d",
-      "post_id": "7968b5c9-ba87-8485-935d-13db8c64ba0a",
-      "content": "ㅇㄴㄹㄴㅇㄹㄹㅇㄴㄹㄴ",
-      "toggledisplay": true
+      "id": "924dbdc7-6d71-4fcc-dfb4-3f0a6907e368",
+      "title": "7",
+      "content": "7"
+    },
+    {
+      "id": "01b71eb6-82e1-82af-24ba-2ccf688ae8c7",
+      "title": "8",
+      "content": "8"
+    },
+    {
+      "id": "e0e6d020-7695-da60-b25e-5ccba4457838",
+      "title": "9",
+      "content": "9"
     }
   ],
+  "comments": [],
   "product_post": [],
   "product_comments": []
 }
