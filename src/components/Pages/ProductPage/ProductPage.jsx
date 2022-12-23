@@ -4,8 +4,14 @@ import { Link, useParams } from "react-router-dom";
 import { __getProductpost } from "../../../redux/modules/productposts";
 import ProductComment from "./ProductComment";
 import "./ProductPage.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Postpage = () => {
+  useEffect(() => {
+    AOS.init();
+  })
+
   const dispatch = useDispatch();
   const { product_posts } = useSelector((state) => {
     return state.product_posts;
@@ -49,14 +55,14 @@ const Postpage = () => {
         {/* 상세페이지*/}
         <div className="product_contents">
           <div>
-            <div className="product_box">
+            <div className="product_box"  data-aos="fade-right" data-aos-duration="2000">
               <span>
                 <img src={product_post?.detail1} />
               </span>
               <h2>{product_post?.detailTitle1}</h2>
               <p>{product_post?.detailText1}</p>
             </div>
-            <div className="product_box">
+            <div className="product_box"  data-aos="fade-right" data-aos-duration="3000">
               <span>
                 <img src={product_post?.detail3} />
               </span>
@@ -65,7 +71,7 @@ const Postpage = () => {
             </div>
           </div>
           <div>
-            <div className="product_box product_right_box">
+            <div className="product_box product_right_box"  data-aos="fade-left" data-aos-duration="2000">
               <span>
                 <img src={product_post?.detail2} />
               </span>

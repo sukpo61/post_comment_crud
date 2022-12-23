@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Link, useParams } from "react-router-dom";
 import {
   __getproduct_comments,
@@ -12,9 +13,12 @@ import "./ProductComment.css";
 import uuid from "react-uuid";
 
 const ProductComment = (props) => {
+  const { state } = useLocation();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
 
   const { product_comments } = useSelector((state) => {
     return state.product_comments;
@@ -35,16 +39,17 @@ const ProductComment = (props) => {
         dispatch(__deleteproduct_comments(product_post.id));
       };
 
-      const ProductEdit = () => {};
-      /*댓글 삭제*/
+
+      /*댓글 수정*/
+      const ProductEdit = () => {}
       return (
         <div key={t.id} className="productCommentText">
-          <p>{t.title}</p>
-          <p>{t.content}</p>
-          <div>
-            <button onClick={ProductEdit}>수정</button>
-            <button onClick={DeletePost}>삭제</button>
-          </div>
+            <p>{t.productEdit ? <input /> : t.title}</p>
+            <p>{t.productEdit ? <input /> : t.content}</p>
+            <div>
+              <button onClick={ProductEdit}>수정</button>
+              <button onClick={DeletePost}>삭제</button>
+            </div>
         </div>
       );
     });
@@ -66,6 +71,7 @@ const ProductComment = (props) => {
       product_post_id: props.product_post_id,
       content,
       title,
+      ProductEdit: true
     };
 
     dispatch(__addproduct_comments(NewData));
