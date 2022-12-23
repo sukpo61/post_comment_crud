@@ -7,10 +7,12 @@ import PostAddForm from "../components/Pages/PostAddpage/PostAddForm";
 import Postpage from "../components/Pages/Postpage/Postpage";
 import PostEditForm from "../components/Pages/PostEditpage/PostEditForm";
 import Footer from "../components/Layout/Footer";
+import ScrollToTop from "../components/Layout/ScrollToTop";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop></ScrollToTop>
       <Header></Header>
       <Routes>
         <Route path="/" element={<PostsContainer />} />

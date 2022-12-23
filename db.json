@@ -7,7 +7,20 @@
       "content": "자차카타파하"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "e401cde9-7e60-a06d-1d32-bae613890279",
+      "post_id": "7968b5c9-ba87-8485-935d-13db8c64ba0a",
+      "content": "ㄹㅇㄴㅁㄻㄴㅇ",
+      "toggledisplay": true
+    },
+    {
+      "id": "b48921b1-035b-2fb2-9c09-33ce4dcd805d",
+      "post_id": "7968b5c9-ba87-8485-935d-13db8c64ba0a",
+      "content": "ㅇㄴㄹㄴㅇㄹㄹㅇㄴㄹㄴ",
+      "toggledisplay": true
+    }
+  ],
   "product_post": [],
   "product_comments": []
 }

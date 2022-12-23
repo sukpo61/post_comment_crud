@@ -5,6 +5,7 @@ import { __addPost } from "../../../redux/modules/posts";
 import CusttomButton from "../../Tools/CusttomButton";
 import uuid from "react-uuid";
 import { useNavigate } from "react-router-dom";
+import Reservation_Topimage from "../../Layout/Reservation_Topimage";
 
 const PostAddForm = () => {
   const [title, setTitle] = useState("");
@@ -30,26 +31,35 @@ const PostAddForm = () => {
   };
 
   return (
-    <AddWrap>
-      <Form onSubmit={onSubmitHandler}>
-        <TitleInput
-          className="title"
-          value={title}
-          onChange={(e) => {
-            setTitle(e.target.value);
-          }}
-        />
-        <ContentInput
-          value={content}
-          onChange={(e) => {
-            setContent(e.target.value);
-          }}
-        />
-        <CusttomButton>추가</CusttomButton>
-      </Form>
-    </AddWrap>
+    <Wrap>
+      <Reservation_Topimage></Reservation_Topimage>
+      <AddWrap>
+        <Form onSubmit={onSubmitHandler}>
+          <TitleInput
+            className="title"
+            value={title}
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+          />
+          <ContentInput
+            value={content}
+            onChange={(e) => {
+              setContent(e.target.value);
+            }}
+          />
+          <CusttomButton>추가</CusttomButton>
+        </Form>
+      </AddWrap>
+    </Wrap>
   );
 };
+
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
 
 const AddWrap = styled.div`
   width: 1000px;

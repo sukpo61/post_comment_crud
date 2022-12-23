@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { __addPost, __updatePost } from "../../../redux/modules/posts";
 import { useNavigate, useLocation } from "react-router-dom";
+import Reservation_Topimage from "../../Layout/Reservation_Topimage";
 
 const PostEditForm = () => {
   const { state } = useLocation();
@@ -30,40 +31,75 @@ const PostEditForm = () => {
   };
 
   return (
-    <AddWrap>
-      <Form onSubmit={onSubmitHandler}>
-        <TitleInput
-          className="title"
-          type="text"
-          value={title}
-          onChange={(e) => {
-            setTitle(e.target.value);
+    <Wrap>
+      <Reservation_Topimage></Reservation_Topimage>
+      <AddWrap>
+        <ReserTitle>
+          <span>예약하기</span>
+        </ReserTitle>
+        <Form onSubmit={onSubmitHandler}>
+          <TitleInput
+            className="title"
+            type="text"
+            value={title}
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+          />
+          <ContentInput
+            type="text"
+            value={content}
+            onChange={(e) => {
+              setContent(e.target.value);
+            }}
+          />
+          <CusttomButton>수정</CusttomButton>
+        </Form>
+        <CusttomButton
+          onClick={() => {
+            navigate("/");
           }}
-        />
-        <ContentInput
-          type="text"
-          value={content}
-          onChange={(e) => {
-            setContent(e.target.value);
-          }}
-        />
-        <CusttomButton>수정</CusttomButton>
-      </Form>
-      <CusttomButton
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        취소
-      </CusttomButton>
-    </AddWrap>
+        >
+          취소
+        </CusttomButton>
+      </AddWrap>
+    </Wrap>
   );
 };
+const TableHeader = styled.div`
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+`;
+const ReserTitle = styled.div`
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #000000;
+
+  span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+  }
+`;
+
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
 
 const AddWrap = styled.div`
+  position: relative;
+  top: -50px;
   width: 1000px;
   min-width: 500px;
-  margin: 100px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 `;
@@ -79,9 +115,7 @@ const TitleInput = styled.input`
   margin-top: 50px;
   height: 25px;
   width: 100%;
-  border-radius: 12px;
   outline: none;
-  padding: 0 10px;
 `;
 
 const ContentInput = styled.textarea`

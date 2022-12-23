@@ -62,7 +62,7 @@ const CommentContainer = ({ post }) => {
         <User>asdasdf</User>
         <div>
           {post.toggledisplay ? (
-            <div>{post.content}</div>
+            <ContentInputWrap>{post.content}</ContentInputWrap>
           ) : (
             <ContentInputWrap>
               <ContentInput
@@ -114,34 +114,35 @@ const CommentInfoWrap = styled.div`
 const User = styled.span`
   font-weight: 400;
   font-size: 14px;
-  margin-top: 10px;
+  padding-bottom: 10px;
 `;
 
 const ContentsWrap = styled.div`
   height: 84px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
 `;
 
 const ContentInputWrap = styled.div`
+  height: 20px;
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin-top: 10px;
+  gap: 10px;
+  padding-bottom: 10px;
 `;
 
 const ButtonWrap = styled(ContentsWrap)``;
 
 const CommentWrap = styled.div`
+  padding: 0 20px;
   width: 100%;
-  height: 84px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
   border-top: 1px solid #eee;
 `;
 
@@ -153,10 +154,10 @@ const CusttomButton = styled.button`
 `;
 
 const ContentInput = styled.input`
-  border: 1px solid #eee;
-  height: 25px;
+  border: none;
+  border-bottom: 1px solid #a5a5a5;
+  height: 20px;
   width: 500px;
-  border-radius: 12px;
   outline: none;
   padding: 0 10px;
 `;
