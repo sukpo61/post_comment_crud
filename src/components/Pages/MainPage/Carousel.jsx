@@ -7,6 +7,7 @@ const Carousel = ({ img1, img2, img3, img4, img5 }) => {
   const settings = {
     dots: false,
     infinite: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -19,7 +20,7 @@ const Carousel = ({ img1, img2, img3, img4, img5 }) => {
     <div className='carousel'>
       <Slider {...settings}>
         {arr.map((item) => {
-          return <img src={item} alt='carousel' />;
+          return <img src={item} alt='반죽' />;
         })}
       </Slider>
     </div>
