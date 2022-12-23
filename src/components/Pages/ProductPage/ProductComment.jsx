@@ -6,7 +6,6 @@ import {
   __getproduct_comments,
   __addproduct_comments,
   __deleteproduct_comments,
-  __deleteAllproduct_comments,
   __updateproduct_comments,
 } from "../../../redux/modules/productcomments";
 import "./ProductComment.css";
@@ -19,15 +18,13 @@ const ProductComment = (props) => {
   const [editTitle, setEditTitle] = useState("");
   const [editContent, setEditContent] = useState("");
   const dispatch = useDispatch();
-  const [editButton, setEditButton] = useState(false);
+  // const [editButton, setEditButton] = useState(false);
 
   useEffect(() => {
     dispatch(__getproduct_comments());
   }, [dispatch]);
 
-  const ProductEditButton = () => {
-    setEditButton((check) => !check);
-  };
+  const ProductEditButton = () => {};
 
   const { product_comments } = useSelector((state) => {
     return state.product_comments;
@@ -47,51 +44,80 @@ const ProductComment = (props) => {
       };
 
       /*댓글 수정*/
-      const productCommentOnSubmit = (e) => {
+      const productCommentOnSubmit = (e, t) => {
         e.preventDefault();
-        if (editTitle == "" || editContent == "") return; 
+        if (editTitle == "" || editContent == "") return;
 
         let NewPost = {
-          ...state,
-          title,
-          content,
+          ...t,
+          title: editTitle,
+          content: editContent,
+          toggledisplay: !t.toggledisplay,
         };
-    
+
         dispatch(__updateproduct_comments(NewPost));
-    
+
         setEditTitle("");
         setEditContent("");
-      }
+      };
 
+      // /*댓글 수정*/
+      const ProductEdit = (t) => {
+        let NewComment = {
+          ...t,
+          toggledisplay: !t.toggledisplay,
+        };
 
-      /*댓글 수정*/
-      const ProductEdit = () => {}
+        setEditTitle(t.title);
+        setEditContent(t.content);
+
+        dispatch(__updateproduct_comments(NewComment));
+      };
+
       return (
-        <div key={t.id} className="productCommentText" edit={editButton}>
-          <form onSubmit={productCommentOnSubmit}>
-              <p>{editButton ? <input 
-              type="text"
-              value={editTitle}
-              onChange={(e) => {
-                setEditTitle(e.target.value);
-              }}
-              maxLength={10}
-              /> : t.title}</p>
-              <p>{editButton ? <input 
-                type="text"
-                onChange={(e) => {
-                  setEditContent(e.target.value);
-                }}
-                value={editContent}
-                maxLength={25}
-              /> : t.content}</p>
-                 {editButton ? <button>완료</button> : ""}
-                 </form>
+        <div key={t.id} className="productCommentText">
+          <form onSubmit={(e) => productCommentOnSubmit(e, t)}>
+            <p>
+              {t.toggledisplay ? (
+                <input
+                  type="text"
+                  value={editTitle}
+                  onChange={(e) => {
+                    setEditTitle(e.target.value);
+                  }}
+                  maxLength={10}
+                />
+              ) : (
+                t.title
+              )}
+            </p>
+            <p>
+              {t.toggledisplay ? (
+                <input
+                  type="text"
+                  onChange={(e) => {
+                    setEditContent(e.target.value);
+                  }}
+                  value={editContent}
+                  maxLength={25}
+                />
+              ) : (
+                t.content
+              )}
+            </p>
+            {t.toggledisplay ? <button>완료</button> : ""}
+          </form>
 
-              <div>
-                <button onClick={ProductEditButton}>{editButton ? "취소" : "수정"}</button>
-                <button onClick={DeletePost}>삭제</button>
-              </div>
+          <div>
+            <button
+              onClick={() => {
+                ProductEdit(t);
+              }}
+            >
+              {t.toggledisplay ? "취소" : "수정"}
+            </button>
+            <button onClick={DeletePost}>삭제</button>
+          </div>
         </div>
       );
     });
@@ -109,7 +135,7 @@ const ProductComment = (props) => {
       product_post_id: props.product_post_id,
       content,
       title,
-      productEdit: false
+      toggledisplay: false,
     };
 
     dispatch(__addproduct_comments(NewData));

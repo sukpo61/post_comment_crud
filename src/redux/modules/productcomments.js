@@ -68,6 +68,7 @@ export const __updateproduct_comments = createAsyncThunk(
   "product_comments/updateproduct_comments",
   async (payload, thunkAPI) => {
     try {
+      console.log(payload);
       await axios.patch(
         `http://localhost:3003/product_comments/${payload.id}`,
         payload

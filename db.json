@@ -54,74 +54,11 @@
   ],
   "product_comments": [
     {
-      "id": "d2af27a6-1ecf-179e-c481-e716d0df1b51",
+      "id": "be26c4ae-b36c-4070-48e2-4ac577d899d2",
       "product_post_id": "1",
-      "content": "1번번",
-      "title": "1번",
-      "productEdit": false
-    },
-    {
-      "id": "f92de648-0dfa-8ad4-6a68-48e514eba647",
-      "product_post_id": "1",
-      "content": "ㄴㄴㄴㄴㄴ",
-      "title": "ㅇㄴㄴㄴ",
-      "productEdit": false
-    },
-    {
-      "id": "ff7818b9-b8de-f2fc-e786-4b721b134426",
-      "product_post_id": "1",
-      "content": "ss",
-      "title": "ss",
-      "productEdit": false
-    },
-    {
-      "id": "450dc380-ea2d-8d47-ae97-4387aadd7be6",
-      "product_post_id": "1",
-      "content": "asd",
-      "title": "asd",
-      "productEdit": true
-    },
-    {
-      "id": "2a9a2900-e35a-f26b-c163-cb709f87742f",
-      "product_post_id": "1",
-      "content": "ssssss",
-      "title": "ssss",
-      "productEdit": true
-    },
-    {
-      "id": "547a8f70-58ae-b19f-0b10-ebd2b3571e97",
-      "product_post_id": "2",
-      "content": "22222번번번",
-      "title": "2번 페이지",
-      "productEdit": true
-    },
-    {
-      "id": "24520d68-352e-482c-32ea-710db8043599",
-      "product_post_id": "2",
-      "content": "222",
-      "title": "22",
-      "productEdit": true
-    },
-    {
-      "id": "59491004-f7e3-b08b-8f55-c1381cafd4d6",
-      "product_post_id": "2",
-      "content": "sdf",
-      "title": "sdf",
-      "productEdit": false
-    },
-    {
-      "id": "3db073fc-818b-87a2-9ce5-4838ed7c3be7",
-      "product_post_id": "1",
-      "content": "sdf",
-      "title": "sdf",
-      "productEdit": false
-    },
-    {
-      "id": "aa3c6252-9523-5f50-c439-1d938683961b",
-      "product_post_id": "1",
-      "content": "sdf",
-      "title": "sdf",
-      "productEdit": false
+      "content": "2313",
+      "title": "121",
+      "toggledisplay": false
     }
   ]
 }
