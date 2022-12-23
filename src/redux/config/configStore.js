@@ -8,7 +8,7 @@ import posts from '../modules/posts';
 import comments from '../modules/comments';
 import product_posts from '../modules/productposts';
 import product_comments from '../modules/productcomments';
-import products from '../modules/products';
+
 /**
  * 모듈(Slice)이 여러개인 경우
  * 추가할때마다 reducer 안에 각 모듈의 slice.reducer를 추가해줘야 합니다.
@@ -22,7 +22,6 @@ const store = configureStore({
     comments: comments,
     product_posts: product_posts,
     product_comments: product_comments,
-    products,
   },
 });
 

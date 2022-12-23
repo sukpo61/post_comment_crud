@@ -1,33 +1,46 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import styled from "styled-components";
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { __getPost } from '../../../redux/modules/posts';
 
 function MenuList() {
   // store에 있는 products들을 가져와야 함
-  const { products } = useSelector((state) => state.products);
-  const [currentCategory, setCurrentCategory] = useState("Bread");
-  console.log(products);
-  // const changeCategory = (c) => {
-  //   // setCurrentCategory(c);
-  //   // console.log(currentCategory);
-  // };
+  // 로컬에 저장된 state를 db.json으로 변경하는 함수 useEffect필요
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(__getPost());
+  }, [dispatch]);
+
+  // 데이터 read해오는 함수
+  const { product_posts } = useSelector((state) => state.product_posts);
+
+  // 카테고리 출력하고 출력하게 함..........
+  // 리턴문에 filter대신 if elseif 쓰고........
+  const [currProductMenu, setCurrProductMenu] = useState('Bread');
+  console.log(product_posts);
+
+  const handleClick = (menu) => () => {
+    setCurrProductMenu(menu);
+  };
+
+  // currying
   return (
     <div>
       <StyledCategroyBox>
-        <div onClick={setCurrentCategory("Bread")}>Bread</div>
-        <div onClick={setCurrentCategory("Cake")}>Cake</div>
-        <div onClick={setCurrentCategory("Cookie")}>Cookie</div>
-        <div onClick={setCurrentCategory("Coffee")}>Coffee</div>
+        <div onClick={handleClick('bread')}>Bread</div>
+        <div onClick={handleClick('cake')}>Cake</div>
+        <div onClick={handleClick('cookie')}>Cookie</div>
+        <div onClick={handleClick('coffee')}>Coffee</div>
       </StyledCategroyBox>
       <StyledListBox>
         {/* products중에 카테고리가 bread인 아이템들만 가져와서 */}
-        {products.map(
+        {product_posts.map(
           (item) =>
-            item.category === currentCategory && (
+            item.productMenu === currProductMenu && (
               <StyledPoductsBox key={item.id}>
                 <img src={item.img} />
-                <p>{item.name}</p>
+                <p>{item.title}</p>
               </StyledPoductsBox>
             )
         )}
