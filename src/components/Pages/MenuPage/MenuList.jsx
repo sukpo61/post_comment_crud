@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
-import { __getProductpost } from '../../../redux/modules/productposts';
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
+import { __getProductpost } from "../../../redux/modules/productposts";
 
 function MenuList() {
   // store에 있는 products들을 가져와야 함
@@ -17,7 +17,7 @@ function MenuList() {
 
   // 카테고리 출력하고 출력하게 함..........
   // 리턴문에 filter대신 if elseif 쓰고........
-  const [currProductMenu, setCurrProductMenu] = useState('Bread');
+  const [currProductMenu, setCurrProductMenu] = useState("cake");
   console.log(product_posts);
 
   const handleClick = (menu) => () => {
@@ -28,10 +28,10 @@ function MenuList() {
   return (
     <div>
       <StyledCategroyBox>
-        <div onClick={handleClick('bread')}>Bread</div>
-        <div onClick={handleClick('cake')}>Cake</div>
-        <div onClick={handleClick('cookie')}>Cookie</div>
-        <div onClick={handleClick('coffee')}>Coffee</div>
+        <div onClick={handleClick("bread")}>Bread</div>
+        <div onClick={handleClick("cake")}>Cake</div>
+        <div onClick={handleClick("cookie")}>Cookie</div>
+        <div onClick={handleClick("coffee")}>Coffee</div>
       </StyledCategroyBox>
       <StyledListBox>
         {/* products중에 카테고리가 bread인 아이템들만 가져와서 */}
