@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { __getPost } from '../../../redux/modules/posts';
+import { __getProductpost } from '../../../redux/modules/productposts';
 
 function MenuList() {
   // store에 있는 products들을 가져와야 함
@@ -9,7 +9,7 @@ function MenuList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(__getPost());
+    dispatch(__getProductpost());
   }, [dispatch]);
 
   // 데이터 read해오는 함수
