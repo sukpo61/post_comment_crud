@@ -16,9 +16,18 @@ const ProductComment = (props) => {
   const { state } = useLocation();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [editTitle, setEditTitle] = useState("");
+  const [editContent, setEditContent] = useState("");
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [editButton, setEditButton] = useState(false);
 
+  useEffect(() => {
+    dispatch(__getproduct_comments());
+  }, [dispatch]);
+
+  const ProductEditButton = () => {
+    setEditButton((check) => !check);
+  };
 
   const { product_comments } = useSelector((state) => {
     return state.product_comments;
@@ -33,30 +42,59 @@ const ProductComment = (props) => {
       const product_post = product_comments.find((post) => post.id === t.id);
 
       const DeletePost = () => {
-        console.log(product_comments);
-        console.log(product_post);
         // dispatch(__deleteAllproduct_comments(product_comment.id));
         dispatch(__deleteproduct_comments(product_post.id));
       };
+
+      /*댓글 수정*/
+      const productCommentOnSubmit = (e) => {
+        e.preventDefault();
+        if (editTitle == "" || editContent == "") return; 
+
+        let NewPost = {
+          ...state,
+          title,
+          content,
+        };
+    
+        dispatch(__updateproduct_comments(NewPost));
+    
+        setEditTitle("");
+        setEditContent("");
+      }
 
 
       /*댓글 수정*/
       const ProductEdit = () => {}
       return (
-        <div key={t.id} className="productCommentText">
-            <p>{t.productEdit ? <input /> : t.title}</p>
-            <p>{t.productEdit ? <input /> : t.content}</p>
-            <div>
-              <button onClick={ProductEdit}>수정</button>
-              <button onClick={DeletePost}>삭제</button>
-            </div>
+        <div key={t.id} className="productCommentText" edit={editButton}>
+          <form onSubmit={productCommentOnSubmit}>
+              <p>{editButton ? <input 
+              type="text"
+              value={editTitle}
+              onChange={(e) => {
+                setEditTitle(e.target.value);
+              }}
+              maxLength={10}
+              /> : t.title}</p>
+              <p>{editButton ? <input 
+                type="text"
+                onChange={(e) => {
+                  setEditContent(e.target.value);
+                }}
+                value={editContent}
+                maxLength={25}
+              /> : t.content}</p>
+                 {editButton ? <button>완료</button> : ""}
+                 </form>
+
+              <div>
+                <button onClick={ProductEditButton}>{editButton ? "취소" : "수정"}</button>
+                <button onClick={DeletePost}>삭제</button>
+              </div>
         </div>
       );
     });
-
-  useEffect(() => {
-    dispatch(__getproduct_comments());
-  }, [dispatch]);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -71,7 +109,7 @@ const ProductComment = (props) => {
       product_post_id: props.product_post_id,
       content,
       title,
-      ProductEdit: true
+      productEdit: false
     };
 
     dispatch(__addproduct_comments(NewData));

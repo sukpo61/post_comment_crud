@@ -49,7 +49,9 @@
   display: flex;
   align-items: center;
 }
+
 .productCommentContents div p {
+  height:25px;
   padding-left: 10px;
 }
 .productCommentTitle {
@@ -68,35 +70,62 @@
   border-bottom: 2px solid #212121;
 }
 .productCommentText {
+  display:flex !important; 
   border-bottom: 1px solid #ccc;
 }
-.productCommentText p:first-child {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.productCommentText form p:first-child {
+  margin-top: 15px;
+  margin-bottom: 5px;
   width: 200px;
-  padding-bottom: 5px;
 }
-.productCommentText p:last-child {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 1200px;
+.productCommentText form p:last-child {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 1000px;
 }
 .productCommentText button {
   width: 45px;
   height: 25px;
 }
-.productCommentText div {
+.productCommentText form > div {
   margin-left: auto;
 }
-.productCommentText div button {
+.productCommentText button {
   margin-right: 10px;
   background: #fff;
   border: 1px solid #212121;
   border-radius: 5px;
   cursor: pointer;
   transition: ease 0.3s;
+  width:40px;
+  height:25px;
 }
-.productCommentText div button:hover {
+.productCommentText form > button {
+  margin-left:auto;
+  margin-right: 10px;
+  background: #fff;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 0.3s;
+  width:40px;
+  height:25px;
+}
+.productCommentText button:hover {
   background: #727272;
   color: #fff;
+}
+.productCommentText form{
+  width:1400px;
+  display:flex;
+  align-items:center;
+}
+.productCommentText form p{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.productCommentText form input{
+  width: 200px !important;
+  height:25px !important;
+  border:1px solid #212121 !important;
 }
