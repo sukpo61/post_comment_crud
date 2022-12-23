@@ -5,9 +5,9 @@ import Carousel from './Carousel';
 export default function Mainpage() {
   return (
     <body>
-      <p className='MainText'>
-        N<br />U<br />L<br />L<br />B<br />A<br />K<br />E<br />R<br />Y
-      </p>
+      <div className='mainText'>
+        <p className='mainText__null'>NULL BAKERY</p>
+      </div>
       <img
         className='mainBread'
         src='images/HomePageimg/changeMain.png'
