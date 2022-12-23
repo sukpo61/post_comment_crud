@@ -10,7 +10,7 @@ const Footer = () => {
           className='footer__img'
           src='images/HomePageimg/Logo.png'
           alt='로고'
-          width='100px'
+          width='120px'
         />
         <p className='footer__p'>
           이용약관 ㅣ 개인정보 처리방침 ㅣ 인재채용 ㅣ 협력 및 제안 문의
