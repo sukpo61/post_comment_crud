@@ -18,12 +18,12 @@ a {
 
 .HeaderLogo {
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 100px;
   width: 80px;
 }
 
 .Hambuger {
-  margin-right: 40px;
+  margin-right: 100px;
   cursor: pointer;
 }
 
