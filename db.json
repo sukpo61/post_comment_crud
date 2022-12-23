@@ -1,6 +1,12 @@
 {
   "author": [],
-  "posts": [],
+  "posts": [
+    {
+      "id": "7968b5c9-ba87-8485-935d-13db8c64ba0a",
+      "title": "가나다라마",
+      "content": "자차카타파하"
+    }
+  ],
   "comments": [],
   "product_post": [],
   "product_comments": []

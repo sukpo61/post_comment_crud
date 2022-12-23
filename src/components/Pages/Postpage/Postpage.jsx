@@ -171,7 +171,7 @@ const PostButtonWrap = styled.div`
 const ContentWrap = styled.div`
   padding: 30px 20px;
   min-height: 200px;
-
+  white-space: pre-line;
   display: flex;
   gap: 20px;
 `;
