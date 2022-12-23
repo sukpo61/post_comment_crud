@@ -8,8 +8,8 @@ function MenuList() {
   const [currentCategory, setCurrentCategory] = useState('Bread');
 
   const changeCategory = (c) => {
-    // setCurrentCategory(c);
-    // console.log(currentCategory);
+    setCurrentCategory(c);
+    console.log(currentCategory);
   };
 
   return (
@@ -26,10 +26,10 @@ function MenuList() {
           .filter((item) => item.category === 'Bread')
           .map((item) => {
             return (
-              <div>
+              <StyledPoductsBox>
                 <img src={item.img} />
                 <p>{item.name}</p>
-              </div>
+              </StyledPoductsBox>
             );
           })}
       </StyledListBox>
@@ -38,6 +38,15 @@ function MenuList() {
 }
 
 export default MenuList;
+
+const StyledCategroyBox = styled.div`
+  background-color: aqua;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  cursor: pointer;
+`;
 
 const StyledListBox = styled.div`
   background-color: beige;
@@ -49,9 +58,10 @@ const StyledPoductsBox = styled.div`
   padding: 20px;
   margin: 5px;
   display: grid;
-`;
-const StyledCategroyBox = styled.div`
-  background-color: aqua;
-  padding: 10s0px;
-  display: flex;
+  align-content: center;
+  grid-template-columns: 200px 200px 200px;
+  grid-auto-rows: minmax(100px, auto);
+  width: 224px;
+  height: 224px;
+  resize: both;
 `;

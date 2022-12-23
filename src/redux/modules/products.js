@@ -42,6 +42,18 @@ const initialState = [
     id: uuidv4(),
   },
   {
+    category: 'Bread',
+    name: '몽블랑',
+    img: 'images/Products/monblanc.jpeg',
+    id: uuidv4(),
+  },
+  {
+    category: 'Bread',
+    name: '베이글',
+    img: 'images/Products/bagel.jpeg',
+    id: uuidv4(),
+  },
+  {
     category: 'Cake',
     name: '루돌프사슴코는',
     img: 'images/Products/rudolf.jpeg',
