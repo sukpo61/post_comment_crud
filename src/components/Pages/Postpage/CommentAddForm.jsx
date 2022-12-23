@@ -28,6 +28,8 @@ const CommentAddForm = (props) => {
     "해루석",
     "키아나",
     "고뭉치",
+    "고양이",
+    "정근띠",
   ];
 
   const randomName = NameArray[Math.floor(Math.random() * NameArray.length)];

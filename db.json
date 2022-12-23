@@ -16,26 +16,33 @@
       "content": "fsdfdsfs",
       "date": "2022.12.23.",
       "time": "19:50"
+    },
+    {
+      "id": "7adfc12f-235c-6cb6-8f93-c418fbb05bc2",
+      "name": "고뭉치",
+      "title": "sdf",
+      "content": "asfdsafsdafasdf",
+      "date": "2022.12.23.",
+      "time": "20:45"
+    },
+    {
+      "id": "c64e21b2-6596-9c1a-5c3a-4115dda28642",
+      "name": "고뭉치",
+      "title": "sdfsf",
+      "content": "sfdsfs",
+      "date": "2022.12.23.",
+      "time": "20:46"
     }
   ],
   "comments": [
     {
-      "id": "8b40bf85-09ec-d103-d8ce-091d658c663b",
-      "name": "나이트엘프",
-      "post_id": "ba1a497f-8607-1688-5a5d-596cd52f9885",
-      "content": "가나다라마",
-      "toggledisplay": true,
-      "date": "2022.12.23.",
-      "time": "19:50"
-    },
-    {
-      "id": "984762ba-2b34-b672-abf4-af6ffd458464",
-      "name": "워익",
+      "id": "0aabd181-9c50-cfba-c59c-0302db62e073",
+      "name": "아드리아",
       "post_id": "751a01d0-9e1f-0139-8f63-6ab598513942",
-      "content": "ㄴㅇㄹㄴㅇㄹㅇㄴㄹㄴㅇㄹㄴㅇㅁㄹ",
+      "content": "sdfsdf",
       "toggledisplay": true,
       "date": "2022.12.23.",
-      "time": "19:51"
+      "time": "20:45"
     }
   ],
   "product_post": [],
