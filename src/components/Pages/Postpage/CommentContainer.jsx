@@ -21,7 +21,9 @@ const CommentContainer = ({ post }) => {
   };
 
   const DeleteConmment = () => {
-    dispatch(__deleteComment(post.id));
+    if (window.confirm("정말 삭제하시겠습니까?")) {
+      dispatch(__deleteComment(post.id));
+    }
   };
 
   const UpdateComment = () => {

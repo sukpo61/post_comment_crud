@@ -59,7 +59,7 @@ const PostEditForm = () => {
             <CusttomButton>수정</CusttomButton>
             <CusttomButton
               onClick={() => {
-                navigate("/");
+                navigate(`/${state.id}`);
               }}
             >
               취소

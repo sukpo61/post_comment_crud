@@ -26,12 +26,11 @@ const Postpage = () => {
   }, [dispatch]);
 
   const DeletePost = () => {
-    dispatch(__deleteAllComment(post.id));
-
-    // console.log(post.id);
-    dispatch(__deletePost(post.id));
-
-    navigate("/");
+    if (window.confirm("정말 삭제하시겠습니까?")) {
+      dispatch(__deleteAllComment(post.id));
+      dispatch(__deletePost(post.id));
+      navigate("/");
+    }
   };
 
   const EditPost = () => {

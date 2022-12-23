@@ -4,17 +4,20 @@ import { __addComment } from "../../../redux/modules/comments";
 import styled from "styled-components";
 import CusttomButton from "../../Tools/CusttomButton";
 import uuid from "react-uuid";
+import { postTime } from "../../Layout/PostTime";
 
 const CommentAddForm = (props) => {
   const [content, setContent] = useState("");
   const dispatch = useDispatch();
 
-  const dateinfo = new Date();
-  const hours = ("0" + dateinfo.getHours()).slice(-2);
-  const minutes = ("0" + dateinfo.getMinutes()).slice(-2);
+  const { PostDate, PostTime } = postTime();
 
-  const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
-  const time = hours + ":" + minutes;
+  // const dateinfo = new Date();
+  // const hours = ("0" + dateinfo.getHours()).slice(-2);
+  // const minutes = ("0" + dateinfo.getMinutes()).slice(-2);
+
+  // const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
+  // const time = hours + ":" + minutes;
 
   const NameArray = [
     "아드리아",
@@ -39,8 +42,8 @@ const CommentAddForm = (props) => {
       post_id: props.post_id,
       content,
       toggledisplay: true,
-      date,
-      time,
+      date: PostDate,
+      time: PostTime,
     };
 
     dispatch(__addComment(NewData));

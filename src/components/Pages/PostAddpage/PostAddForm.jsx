@@ -5,7 +5,7 @@ import { __addPost } from "../../../redux/modules/posts";
 import uuid from "react-uuid";
 import { useNavigate } from "react-router-dom";
 import Reservation_Topimage from "../../Layout/Reservation_Topimage";
-import PostTime from "../../Layout/Time";
+import { postTime } from "../../Layout/PostTime";
 
 const PostAddForm = () => {
   const [title, setTitle] = useState("");
@@ -13,12 +13,16 @@ const PostAddForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const dateinfo = new Date();
-  const hours = ("0" + dateinfo.getHours()).slice(-2);
-  const minutes = ("0" + dateinfo.getMinutes()).slice(-2);
+  const { PostDate, PostTime } = postTime();
 
-  const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
-  const time = hours + ":" + minutes;
+  // console.log(PostDate, PostTime);
+
+  // const dateinfo = new Date();
+  // const hours = ("0" + dateinfo.getHours()).slice(-2);
+  // const minutes = ("0" + dateinfo.getMinutes()).slice(-2);
+
+  // const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
+  // const time = hours + ":" + minutes;
 
   const NameArray = [
     "아드리아",
@@ -35,9 +39,10 @@ const PostAddForm = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    if (title == "" || content == "") return; // 아무것도 입력하지 않았을 때 dispatch 하지 않음
-
-    console.log(PostTime);
+    if (title == "" || content == "") {
+      window.alert("제목및 내용을 입력하십시오");
+      return;
+    } // 아무것도 입력하지 않았을 때 dispatch 하지 않음
 
     let NewID = uuid();
 
@@ -46,8 +51,8 @@ const PostAddForm = () => {
       name: randomName,
       title,
       content,
-      date,
-      time,
+      date: PostDate,
+      time: PostTime,
     };
 
     console.log(NewData);
