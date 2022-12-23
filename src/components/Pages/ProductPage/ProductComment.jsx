@@ -20,28 +20,29 @@ const ProductComment = (props) => {
     return state.product_comments;
   });
 
-  const product_post = product_comments.find(
-    (post) => post.product_post_id === props.product_post_id
-  );
-
-  const DeletePost = () => {
-    console.log(product_comments);
-    console.log(product_post);
-    // dispatch(__deleteAllproduct_comments(product_comment.id));
-    dispatch(__deleteproduct_comments(product_post.id));
-  };
-
   const product_comment = product_comments
     .filter((item) => {
       return item.product_post_id === props.product_post_id;
     })
     .map((t) => {
+      /*댓글 삭제*/
+      const product_post = product_comments.find((post) => post.id === t.id);
+
+      const DeletePost = () => {
+        console.log(product_comments);
+        console.log(product_post);
+        // dispatch(__deleteAllproduct_comments(product_comment.id));
+        dispatch(__deleteproduct_comments(product_post.id));
+      };
+
+      const ProductEdit = () => {};
+      /*댓글 삭제*/
       return (
         <div key={t.id} className="productCommentText">
           <p>{t.title}</p>
           <p>{t.content}</p>
           <div>
-            <button>수정</button>
+            <button onClick={ProductEdit}>수정</button>
             <button onClick={DeletePost}>삭제</button>
           </div>
         </div>
