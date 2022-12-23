@@ -20,18 +20,19 @@
   display: flex;
   justify-content: space-around;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    151deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(227, 209, 179, 1) 52%
-  );
+  border-radius: 30px;
 }
 
 .carousel {
-  width: 30%;
-  height: 100%;
+  width: 500px;
   margin: 30px;
   padding: 10px;
+  border-radius: 30px;
+}
+
+.carousel img {
+  height: 500px;
+  object-fit: cover;
   border-radius: 30px;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .wheat__p4 {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 .wheat__p5 {

@@ -10,6 +10,10 @@ const Carousel = ({ img1, img2, img3, img4, img5 }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    lazyLoad: 'progressive',
   };
   const arr = [img1, img2, img3, img4, img5];
   return (
