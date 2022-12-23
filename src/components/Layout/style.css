@@ -43,3 +43,26 @@ a {
 .footer__p {
   margin-top: 30px;
 }
+
+.scroll__container {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
+}
+
+.scroll {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 15px 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(210, 204, 193);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.scroll:hover {
+  color: rgb(142, 26, 26);
+}
