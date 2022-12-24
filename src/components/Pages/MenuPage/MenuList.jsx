@@ -64,6 +64,7 @@ export default MenuList;
 const StyledHeader = styled.div`
   background-color: white;
   padding-top: 100px;
+  padding-left: 75px;
   margin: 20px;
   color: black;
   font-size: 50px;
