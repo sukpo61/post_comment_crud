@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
-import { __getProductpost } from "../../../redux/modules/productposts";
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { __getProductpost } from '../../../redux/modules/productposts';
 
 function MenuList() {
   // store에 있는 products들을 가져와야 함
@@ -15,26 +15,24 @@ function MenuList() {
   // 데이터 read해오는 함수
   const { product_posts } = useSelector((state) => state.product_posts);
 
-  // 카테고리 출력하고 출력하게 함..........
-  // 리턴문에 filter대신 if elseif 쓰고........
-  const [currProductMenu, setCurrProductMenu] = useState("cake");
+  const [currProductMenu, setCurrProductMenu] = useState('bread');
   console.log(product_posts);
 
+  // product_posts 저장값 중 하나인 productmenu값을 카테고리와 연결하여 state변경을 일으키는 함수
+  // currying! onClick함수의 인자를 비워둬야 제대로 함수식을 쓴 것!
   const handleClick = (menu) => () => {
     setCurrProductMenu(menu);
   };
 
-  // currying
   return (
     <div>
       <StyledCategroyBox>
-        <div onClick={handleClick("bread")}>Bread</div>
-        <div onClick={handleClick("cake")}>Cake</div>
-        <div onClick={handleClick("cookie")}>Cookie</div>
-        <div onClick={handleClick("coffee")}>Coffee</div>
+        <div onClick={handleClick('bread')}>Bread</div>
+        <div onClick={handleClick('cake')}>Cake</div>
+        <div onClick={handleClick('cookie')}>Cookie</div>
+        <div onClick={handleClick('coffee')}>Coffee</div>
       </StyledCategroyBox>
       <StyledListBox>
-        {/* products중에 카테고리가 bread인 아이템들만 가져와서 */}
         {product_posts.map(
           (item) =>
             item.productMenu === currProductMenu && (
@@ -48,16 +46,6 @@ function MenuList() {
     </div>
   );
 }
-// {products
-//   .filter((item) => item.category === "Bread")
-//   .map((item) => {
-//     return (
-//       <StyledPoductsBox>
-//         <img src={item.img} />
-//         <p>{item.name}</p>
-//       </StyledPoductsBox>
-//     );
-//   })}
 
 export default MenuList;
 
