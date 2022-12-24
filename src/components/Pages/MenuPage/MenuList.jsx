@@ -37,7 +37,7 @@ function MenuList() {
           (item) =>
             item.productMenu === currProductMenu && (
               <StyledPoductsBox key={item.id}>
-                <img src={item.img} />
+                <img src={item.detail2} />
                 <p>{item.title}</p>
               </StyledPoductsBox>
             )
@@ -49,29 +49,35 @@ function MenuList() {
 
 export default MenuList;
 
+// 카테고리 바
 const StyledCategroyBox = styled.div`
   background-color: aqua;
   padding: 100px;
+
   display: flex;
-  justify-content: center;
   justify-content: space-around;
-  cursor: pointer;
+
+  /* cursor: pointer; */
 `;
 
+// 제품들 보여지는
 const StyledListBox = styled.div`
   background-color: beige;
   padding: 200px;
+  display: grid;
 `;
 
+// 제품 하나 하나  - 이미지, 이름 세트 - 마우스 호버
 const StyledPoductsBox = styled.div`
   background-color: beige;
-  padding: 20px;
-  margin: 5px;
-  display: grid;
+  /* padding: 20px;
+  margin: 5px; */
+  width: 100%;
+
   align-content: center;
   grid-template-columns: 200px 200px 200px;
   grid-auto-rows: minmax(100px, auto);
-  width: 224px;
-  height: 224px;
+  /* width: 224px;
+  height: 224px; */
   resize: both;
 `;
