@@ -18,7 +18,7 @@ const Postpage = () => {
   });
 
   //   const param = useParams();
-  const product_post = product_posts.find((t) => t.id === "8");
+  const product_post = product_posts.find((t) => t.id === "9");
 
   useEffect(() => {
     dispatch(__getProductpost());
