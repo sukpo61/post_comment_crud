@@ -45,6 +45,11 @@
   height: 50px;
   width: 150px;
   background-color: #fff;
+  transition:0.3s ease;
+}
+.productComment form button:hover{
+  background-color:#727272;
+  color:#fff;
 }
 
 .productCommentContents div {

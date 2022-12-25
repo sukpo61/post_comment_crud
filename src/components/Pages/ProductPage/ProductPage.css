@@ -70,6 +70,11 @@
   color: #fff;
   border: 0;
   margin-top: 10px;
+  transition:0.3s ease;
+}
+.product_visual_text div > div > button:hover{
+  background-color:#ccc;
+  color:#000;
 }
 .product_visual_text div > div > p {
   font-weight: 500;
