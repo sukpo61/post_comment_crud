@@ -17,7 +17,7 @@ const Modal = ({ open, onClose }) => {
           <a href=''>
             <p>HOME</p>
           </a>
-          <a href=''>
+          <a href='/menu'>
             <p>MENU</p>
           </a>
           <a href=''>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
+import './MenuPage.css';
 import { __getProductpost } from '../../../redux/modules/productposts';
 
 function MenuList() {
@@ -26,64 +26,36 @@ function MenuList() {
 
   return (
     <div className='menu_page'>
-      <h1 className='menu_header'>MENU</h1>
-      <div className='menu_bar' onClick={handleClick('bread')}>
-        Bread
-      </div>
-      <div className='menu_bar' onClick={handleClick('cake')}>
-        Cake
-      </div>
-      <div className='menu_bar' onClick={handleClick('cookie')}>
-        Cookie
-      </div>
-      <div className='menu_bar' onClick={handleClick('coffee')}>
-        Coffee
+      {/* <h3 className='menu_header'>MENU</h3> */}
+      <div className='menu_bar'>
+        {/* 클릭하면 밑줄이든 윗줄이든 표시가 되어야 함 글씨도 볼드체면 좋겠다  */}
+        <div className='menu1' onClick={handleClick('bread')}>
+          Bread
+        </div>
+        <div className='menu2' onClick={handleClick('cake')}>
+          Cake
+        </div>
+        <div className='menu3' onClick={handleClick('cookie')}>
+          Cookie
+        </div>
+        <div className='menu4' onClick={handleClick('coffee')}>
+          Coffee
+        </div>
       </div>
       <div className='menu_list'>
+        {/* 만약 카테고리에 해당하는 제품이 하나도 없다면 준비중이라고 띄울 것 */}
         {product_posts.map(
           (item) =>
             item.productMenu === currProductMenu && (
               <div className='product' key={item.id}>
-                <img src={item.detail2} />
-                <p>{item.title}</p>
+                <img className='image' src={item.detail3} />
+                <p className='title'>{item.title}</p>
+                <p className='engtitle'>{item.engtitle}</p>
               </div>
             )
         )}
       </div>
     </div>
-
-    // <div>
-    //   <StyledHeader>
-    //     <div>MENU</div>
-    //   </StyledHeader>
-    //   <StyledCategroyBox>
-    //     <div onClick={handleClick('bread')} style={{ cursor: 'pointer' }}>
-    //       Bread
-    //     </div>
-    //     <div onClick={handleClick('cake')} style={{ cursor: 'pointer' }}>
-    //       Cake
-    //     </div>
-    //     <div onClick={handleClick('cookie')} style={{ cursor: 'pointer' }}>
-    //       Cookie
-    //     </div>
-    //     <div onClick={handleClick('coffee')} style={{ cursor: 'pointer' }}>
-    //       Coffee
-    //     </div>
-    //   </StyledCategroyBox>
-    //   <StyledListBox>
-    //     {product_posts.map(
-    //       (item) =>
-    //         item.productMenu === currProductMenu && (
-    //           <StyledPoductsBox key={item.id}>
-    //             <StyledImg>
-    //               <img src={item.detail2} />
-    //             </StyledImg>
-    //             <p>{item.title}</p>
-    //           </StyledPoductsBox>
-    //         )
-    //     )}
-    //   </StyledListBox>
-    // </div>
   );
 }
 

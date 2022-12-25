@@ -1,10 +1,11 @@
 import React from 'react';
 import MenuList from './MenuList';
+import './MenuPage.css';
 
 function Menu() {
   return (
     <div>
-      {/* <h4>{products.category}</h4> */}
+      <p className='menu_header'>MENU</p>
       <MenuList />
     </div>
   );

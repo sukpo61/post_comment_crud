@@ -25,7 +25,7 @@ const Header = () => {
       </div>
       <div className='Hambuger'>
         <i
-          class='fa-solid fa-bars'
+          className='fa-solid fa-bars'
           onClick={() => {
             setOpenModal(true);
           }}
