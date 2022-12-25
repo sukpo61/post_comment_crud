@@ -90,8 +90,16 @@
   margin-left: 80px;
   margin-top: 62%;
 }
-.product_box span img {
+.product_box span{
+  max-height:450px;
   max-width: 100%;
+
+}
+.product_box span img {
+  height:100%;
+  max-width: 100%;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+  border-radius:22px;
 }
 .product_box h2 {
   margin: 40px 0 20px 10px;
