@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Link, useParams } from "react-router-dom";
+// import { createBrowserHistory } from "history";
 import {
   __getproduct_comments,
   __addproduct_comments,
@@ -39,14 +40,21 @@ const ProductComment = (props) => {
       const product_post = product_comments.find((post) => post.id === t.id);
 
       const DeletePost = () => {
-        // dispatch(__deleteAllproduct_comments(product_comment.id));
-        dispatch(__deleteproduct_comments(product_post.id));
+        if(window.confirm("삭제하시겠습니까?")) {
+          dispatch(__deleteproduct_comments(product_post.id));
+        } else {
+          alert("취소되었습니다.")
+        }
+
       };
 
       /*댓글 수정*/
       const productCommentOnSubmit = (e, t) => {
         e.preventDefault();
-        if (editTitle == "" || editContent == "") return;
+        if (editTitle == "" || editContent == "") {
+          alert("제목,내용을 모두 입력하세요")
+          return;
+        };
 
         let NewPost = {
           ...t,
@@ -61,7 +69,7 @@ const ProductComment = (props) => {
         setEditContent("");
       };
 
-      // /*댓글 수정*/
+      // /*댓글 수정버튼*/
       const ProductEdit = (t) => {
         let NewComment = {
           ...t,

@@ -12,12 +12,12 @@
   display: flex;
 }
 .productComment form input::placeholder {
-  padding-left: 10px;
   color: #ccc;
   font-size: 16px;
   font-weight: 200;
 }
 .productComment form input:first-child {
+  text-indent: 10px;
   width: 200px;
   height: 50px;
   border-radius: 0;
@@ -27,6 +27,8 @@
   box-sizing: border-box;
 }
 .productComment form input:nth-child(2) {
+  text-indent: 10px;
+
   font-size: 16px;
   width: 1050px;
   height: 50px;
@@ -128,4 +130,5 @@
   width: 200px !important;
   height:25px !important;
   border:1px solid #212121 !important;
+  text-indent: 5px !important;
 }
