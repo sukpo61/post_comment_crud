@@ -28,7 +28,7 @@ const PostEditForm = () => {
     setTitle("");
     setContent("");
 
-    navigate(`/${state.id}`);
+    navigate(`/reservation/${state.id}`);
   };
 
   return (
@@ -60,7 +60,7 @@ const PostEditForm = () => {
             <CusttomButton>수정</CusttomButton>
             <CusttomButton
               onClickFuntion={() => {
-                navigate(`/${state.id}`);
+                navigate(`/reservation/${state.id}`);
               }}
             >
               취소

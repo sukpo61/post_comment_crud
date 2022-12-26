@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 const Modal = ({ open, onClose }) => {
+  const navigate = useNavigate();
+
   if (!open) return null;
   return (
     <div className="overlay">
@@ -17,7 +20,15 @@ const Modal = ({ open, onClose }) => {
           <a href="/">
             <p>HOME</p>
           </a>
-          <a href="/menu">
+          <a
+            onClick={() => {
+              navigate("/menu", {
+                state: {
+                  cate: "bread",
+                },
+              });
+            }}
+          >
             <p>MENU</p>
           </a>
           <a href="/reservation">

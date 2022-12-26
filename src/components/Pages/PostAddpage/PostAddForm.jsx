@@ -53,7 +53,7 @@ const PostAddForm = () => {
     setTitle("");
     setContent("");
 
-    navigate(`/${NewID}`);
+    navigate(`/reservation/${NewID}`);
   };
 
   return (
@@ -85,7 +85,7 @@ const PostAddForm = () => {
             <CusttomButton>예약</CusttomButton>
             <CusttomButton
               onClickFuntion={() => {
-                navigate("/");
+                navigate("/reservation");
               }}
             >
               취소

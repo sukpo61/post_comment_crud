@@ -7,12 +7,12 @@ import CommentsContainer from "./CommentsContainer";
 import { __getPost } from "../../../redux/modules/posts";
 import { useLocation, useNavigate } from "react-router-dom";
 import { __deletePost, __updatePost } from "../../../redux/modules/posts";
-import Reservation_Topimage from "../../Layout/Reservation_Topimage";
 import CusttomButton from "../../Tools/CusttomButton";
 import {
   __getComment,
   __deleteAllComment,
 } from "../../../redux/modules/comments";
+import Reservation_Topimage from "../../Layout/Reservation_Topimage";
 
 const Postpage = () => {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ const Postpage = () => {
     if (window.confirm("정말 삭제하시겠습니까?")) {
       dispatch(__deleteAllComment(post.id));
       dispatch(__deletePost(post.id));
-      navigate("/");
+      navigate("/reservation");
     }
   };
 
@@ -57,7 +57,7 @@ const Postpage = () => {
             BorderRadius="0px"
             BackColor="#e3d1b3"
             onClickFuntion={() => {
-              navigate("/");
+              navigate("/reservation");
             }}
           >
             목록
