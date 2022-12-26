@@ -39,7 +39,7 @@ a {
   background-color: #e3d1b3;
   width: 100%;
   padding: 20px 0;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .footer__img {
@@ -54,9 +54,10 @@ a {
 .footerbox2 {
   margin-left: 60px;
 }
-/* .footer__p {
-  margin-top: 30px;
-} */
+.footer__p {
+  font-weight: 100;
+  color: #727272;
+}
 
 .scroll__container {
   position: fixed;

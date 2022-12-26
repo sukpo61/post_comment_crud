@@ -45,13 +45,13 @@ export default function Mainpage() {
       <div class='work__projects'>
         <a href='#' className='project' target='blank'>
           <img
-            src='images/HomePageimg/bread1.png'
-            alt='빵'
+            src='images/HomePageimg/coffee.jpeg'
+            alt='커피'
             className='project__img'
           />
           <div className='project__description'>
             <h3>View more</h3>
-            <span>Bread</span>
+            <span>Coffee</span>
           </div>
         </a>
         <div className='project' target='blank'></div>
@@ -68,25 +68,25 @@ export default function Mainpage() {
         </a>
         <a href='#' className='project' target='blank'>
           <img
-            src='images/HomePageimg/bread3.png'
-            alt='빵'
+            src='images/HomePageimg/coockie.png'
+            alt='쿠키'
             className='project__img'
           />
           <div className='project__description'>
             <h3>View More</h3>
-            <span>Bread</span>
+            <span>coockies</span>
           </div>
         </a>
         <div className='project' target='blank'></div>
         <a href='#' className='project' target='blank'>
           <img
-            src='images/HomePageimg/bread4.png'
-            alt='빵'
+            src='images/HomePageimg/cake.png'
+            alt='케이크'
             className='project__img'
           />
           <div className='project__description'>
             <h3>View More</h3>
-            <span>Bread</span>
+            <span>Cake</span>
           </div>
         </a>
       </div>
