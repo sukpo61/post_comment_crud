@@ -4,15 +4,15 @@ import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 import CommentAddForm from "./CommentAddForm";
 import CommentsContainer from "./CommentsContainer";
-import {
-  __getComment,
-  __deleteAllComment,
-} from "../../../redux/modules/comments";
 import { __getPost } from "../../../redux/modules/posts";
 import { useLocation, useNavigate } from "react-router-dom";
 import { __deletePost, __updatePost } from "../../../redux/modules/posts";
 import Reservation_Topimage from "../../Layout/Reservation_Topimage";
 import CusttomButton from "../../Tools/CusttomButton";
+import {
+  __getComment,
+  __deleteAllComment,
+} from "../../../redux/modules/comments";
 
 const Postpage = () => {
   const dispatch = useDispatch();
