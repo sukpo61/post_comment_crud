@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Modal = ({ open, onClose }) => {
   if (!open) return null;
   return (
-    <div className='overlay'>
-      <div className='modalContainer'>
+    <div className="overlay">
+      <div className="modalContainer">
         <br />
-        <div className='modalRight'>
-          <p onClick={onClose} className='closeBtn'>
+        <div className="modalRight">
+          <p onClick={onClose} className="closeBtn">
             X
           </p>
         </div>
         <br />
         <br />
-        <div className='inputContainer'>
-          <a href=''>
+        <div className="inputContainer">
+          <a href="/">
             <p>HOME</p>
           </a>
-          <a href='/menu'>
+          <a href="/menu">
             <p>MENU</p>
           </a>
-          <a href=''>
+          <a href="/reservation">
             <p>RESERVATION</p>
           </a>
         </div>

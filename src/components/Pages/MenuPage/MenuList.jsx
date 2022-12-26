@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./MenuPage.css";
 import { __getProductpost } from "../../../redux/modules/productposts";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 // useParams가져와서 props를 받아서 어쩌구 하면 헤더가 고정된다..............
 
-function MenuList() {
+const MenuList = () => {
+  const { state } = useLocation();
   // store에 있는 products들을 가져와야 함
   // 로컬에 저장된 state를 db.json으로 변경하는 함수 useEffect필요
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ function MenuList() {
 
   console.log(product_posts);
 
-  const [currProductMenu, setCurrProductMenu] = useState("bread");
+  const [currProductMenu, setCurrProductMenu] = useState(state.cate);
 
   // product_posts 저장값 중 하나인 productmenu값을 카테고리와 연결하여 state변경을 일으키는 함수
   const handleClick = (menu) => () => {
@@ -29,6 +30,7 @@ function MenuList() {
 
   return (
     <div className="menu_page">
+      <p className="menu_header">MENU</p>
       <div className="menu_bar">
         <div className="menu1" onClick={handleClick("bread")}>
           Bread
@@ -65,6 +67,6 @@ function MenuList() {
       </div>
     </div>
   );
-}
+};
 
 export default MenuList;

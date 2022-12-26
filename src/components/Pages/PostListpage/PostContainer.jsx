@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { __deletePost, __updatePost } from '../../../redux/modules/posts';
+import React from "react";
+import styled from "styled-components";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { __deletePost, __updatePost } from "../../../redux/modules/posts";
 import {
   __deleteComment,
   __deleteAllComment,
   __getComment,
-} from '../../../redux/modules/comments';
+} from "../../../redux/modules/comments";
 
 const PostContainer = ({ post }) => {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const PostContainer = ({ post }) => {
   };
 
   const EditPost = () => {
-    navigate('/editform', {
+    navigate("/editform", {
       state: post,
     });
   };
