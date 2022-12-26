@@ -11,7 +11,17 @@
       "content": "fgdfgd"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "76d0bed6-7f63-34a2-7f3c-f0f997905124",
+      "name": "넨마스터",
+      "post_id": "187e103f-a62e-9768-534f-73b6046bde68",
+      "content": "sdfsdf",
+      "toggledisplay": true,
+      "date": "2022.12.26.",
+      "time": "16:09"
+    }
+  ],
   "product_posts": [
     {
       "id": "1",
