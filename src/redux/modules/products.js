@@ -33,44 +33,4 @@ const products = (state = initialState, action) => {
   }
 };
 // 5. export reducer
-
-const initialState = [
-  {
-    category: 'Bread',
-    name: '토종효모식빵',
-    img: 'images/Products/bread.jpeg',
-    id: uuidv4(),
-  },
-  {
-    category: 'Bread',
-    name: '몽블랑',
-    img: 'images/Products/monblanc.jpeg',
-    id: uuidv4(),
-  },
-  {
-    category: 'Bread',
-    name: '베이글',
-    img: 'images/Products/bagel.jpeg',
-    id: uuidv4(),
-  },
-  {
-    category: 'Cake',
-    name: '루돌프사슴코는',
-    img: 'images/Products/rudolf.jpeg',
-    id: uuidv4(),
-  },
-  {
-    category: 'Cookie',
-    name: '브라우니쿠키',
-    img: 'images/Products/browniecookie.jpeg',
-    id: uuidv4(),
-  },
-  {
-    category: 'Coffee',
-    name: '아메리카노',
-    img: 'images/Products/americano.jpeg',
-    id: uuidv4(),
-  },
-];
-
 export default products;
