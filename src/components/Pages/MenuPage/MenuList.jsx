@@ -46,7 +46,7 @@ function MenuList() {
         {product_posts.map(
           (item) =>
             item.productMenu === currProductMenu && (
-              <div className='product' key={item.id}>
+              <div className='menu_product' key={item.id}>
                 <img className='image' src={item.detail3} />
                 <p className='title'>{item.title}</p>
                 <p className='engtitle'>{item.engtitle}</p>

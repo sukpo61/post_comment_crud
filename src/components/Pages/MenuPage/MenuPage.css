@@ -60,7 +60,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   /* align-items: center; */
   align-content: space-evenly;
 }
@@ -68,30 +68,32 @@
   place-self: center;
 }
 
-.product {
+.menu_product {
   display: flex;
   flex-direction: column;
-  justify-content: center !important;
-  align-items: center !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* 마우스 호버 효과 */
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .image:hover {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.025);
   cursor: pointer;
 }
 .image:hover ~ .title {
   font-weight: 500;
+}
+.title {
+  margin-top: 20px;
 }
 
 .engtitle {
