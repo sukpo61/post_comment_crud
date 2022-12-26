@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MenuPage.css';
 import { __getProductpost } from '../../../redux/modules/productposts';
+// useParams가져와서 props를 받아서 어쩌구 하면 헤더가 고정된다..............
 
 function MenuList() {
   // store에 있는 products들을 가져와야 함
@@ -19,16 +20,13 @@ function MenuList() {
   console.log(product_posts);
 
   // product_posts 저장값 중 하나인 productmenu값을 카테고리와 연결하여 state변경을 일으키는 함수
-  // currying! onClick함수의 인자를 비워둬야 제대로 함수식을 쓴 것!
   const handleClick = (menu) => () => {
     setCurrProductMenu(menu);
   };
 
   return (
     <div className='menu_page'>
-      {/* <h3 className='menu_header'>MENU</h3> */}
       <div className='menu_bar'>
-        {/* 클릭하면 밑줄이든 윗줄이든 표시가 되어야 함 글씨도 볼드체면 좋겠다  */}
         <div className='menu1' onClick={handleClick('bread')}>
           Bread
         </div>

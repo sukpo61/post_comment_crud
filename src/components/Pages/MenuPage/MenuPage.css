@@ -7,7 +7,6 @@
   font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
   font-size: 30px;
   text-align: center;
-  /* h2라서 볼드체인가? */
 }
 
 .menu_bar {
@@ -24,6 +23,9 @@
 }
 .menu1:hover {
   font-weight: bold;
+}
+div [className~='menu']:visited ~ .title {
+  border-top: solid 2px #727272;
 }
 
 .menu2 {
@@ -55,17 +57,12 @@
 
 /* container */
 .menu_list {
-  /* background-color: ivory; */
   padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
   grid-gap: 3rem;
-  /* align-items: center; */
   align-content: space-evenly;
-}
-.menu_list .item {
-  place-self: center;
 }
 
 .menu_product {
