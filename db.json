@@ -34,7 +34,17 @@
       "time": "11:09"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "2989f308-2de6-96c1-490e-84d77545b534",
+      "name": "고뭉치",
+      "post_id": "cc074f91-8633-d614-7540-ae535c88eca7",
+      "content": "123123",
+      "toggledisplay": true,
+      "date": "2022.12.26.",
+      "time": "11:40"
+    }
+  ],
   "product_post": [],
   "product_comments": []
 }

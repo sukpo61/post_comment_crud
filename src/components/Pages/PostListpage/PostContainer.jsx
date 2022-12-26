@@ -29,7 +29,7 @@ const PostContainer = ({ post, index }) => {
       <TableTd Width="560px" Position="flex-start">
         <span
           onClick={() => {
-            navigate(`/${post.id}`);
+            navigate(`/reservation/${post.id}`);
           }}
         >
           {post.title}
