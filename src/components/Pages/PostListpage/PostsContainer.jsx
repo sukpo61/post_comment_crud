@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import PostContainer from "./PostContainer";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 import { __getPost } from "../../../redux/modules/posts";
 
 const PostsContainer = () => {
@@ -16,7 +17,14 @@ const PostsContainer = () => {
   return (
     <CommentsWrap>
       {posts.map((post) => {
-        return <PostContainer key={post.id} post={post}></PostContainer>;
+        return <div>
+          <PostContainer key={post.id} post={post}>
+          </PostContainer>
+          <div>
+            {/* <Link to={`/productpage/${post.id}`}>1234</Link> */}
+            <Link to={`/productpage/1`}>1234</Link>
+            </div>
+          </div>;
       })}
     </CommentsWrap>
   );
