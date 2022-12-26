@@ -12,11 +12,11 @@ const Router = () => {
     <BrowserRouter>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<PostsContainer />} />
+        <Route exact path="/" element={<PostsContainer />} />
         <Route path="/productpage" element={<ProductPage />} />
         <Route path="/addform" element={<PostAddForm />} />
         <Route path="/editform" element={<PostEditForm />} />
-        <Route path="/:id" element={<Postpage />} />
+        <Route exact path="/:id" element={<Postpage />} />
       </Routes>
     </BrowserRouter>
   );
