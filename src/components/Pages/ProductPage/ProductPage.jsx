@@ -7,7 +7,7 @@ import "./ProductPage.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Postpage = () => {
+const Productpage = () => {
   useEffect(() => {
     AOS.init();
   });
@@ -18,7 +18,10 @@ const Postpage = () => {
   });
 
   //   const param = useParams();
-  const product_post = product_posts.find((t) => t.id === "18");
+  const param = useParams();
+  const product_post = product_posts.find((product_post) => product_post.id === param.id);
+  // const product_post = product_posts.find((t) => t.id === "18");
+  console.log(product_post)
 
   useEffect(() => {
     dispatch(__getProductpost());
@@ -97,4 +100,4 @@ const Postpage = () => {
     </div>
   );
 };
-export default Postpage;
+export default Productpage;

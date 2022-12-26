@@ -13,7 +13,7 @@ const Router = () => {
       <Header></Header>
       <Routes>
         <Route exact path="/" element={<PostsContainer />} />
-        <Route path="/productpage" element={<ProductPage />} />
+        <Route path="/productpage/:id" element={<ProductPage />} />
         <Route path="/addform" element={<PostAddForm />} />
         <Route path="/editform" element={<PostEditForm />} />
         <Route exact path="/:id" element={<Postpage />} />
