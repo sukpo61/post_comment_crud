@@ -27,6 +27,7 @@ const Modal = ({ open, onClose }) => {
                   cate: "bread",
                 },
               });
+              onClose();
             }}
           >
             <p>MENU</p>

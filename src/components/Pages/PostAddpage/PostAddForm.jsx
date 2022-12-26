@@ -116,6 +116,7 @@ const AddWrap = styled.div`
   top: -50px;
   width: 1000px;
   min-width: 500px;
+  min-height: 60vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

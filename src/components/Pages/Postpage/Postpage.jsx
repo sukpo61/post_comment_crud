@@ -124,36 +124,12 @@ const TableHeader = styled.div`
   border-bottom: 1px solid #000000;
 `;
 
-// const CusttomButton = styled.button`
-//   margin: ${(props) => props.Margin};
-//   width: 65px;
-//   height: 30px;
-//   cursor: pointer;
-//   border: 0.5px solid #a5a5a5;
-//   border-radius: 30px;
-//   font-weight: 200;
-//   font-size: 12px;
-//   color: #000000;
-// `;
-
-const ListButton = styled.button`
-  margin: ${(props) => props.Margin};
-  width: 60px;
-  height: 30px;
-  cursor: pointer;
-  font-weight: 200;
-  font-size: 12px;
-  font-weight: 200;
-  font-size: 12px;
-  color: #6a503c;
-  background: #e3d1b3;
-`;
-
 const PostpageWrap = styled.div`
   position: relative;
   top: -45px;
   width: 1000px;
   min-width: 500px;
+  min-height: 55vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

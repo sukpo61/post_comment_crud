@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import IMG from "./images/top_img.png";
 
 const Reservation_Topimage = () => {
   return (
     <TopimgWrap>
       <Topimg></Topimg>
+      {/* <img src="/images/CummunityPageimg/top_img.png"></img> */}
       <Title>Reservation</Title>
     </TopimgWrap>
   );
 };
+
+// {process.env.PUBLIC_URL + '/img/imgTest.jpg'}
 
 export default Reservation_Topimage;
 
@@ -20,7 +24,7 @@ const TopimgWrap = styled.div`
 `;
 
 const Topimg = styled.img.attrs({
-  src: "images/CummunityPageimg/top_img.png",
+  src: "/images/CummunityPageimg/top_img.png",
 })`
   width: 100%;
   min-height: 500px;
@@ -30,7 +34,7 @@ const Topimg = styled.img.attrs({
 const Title = styled.div`
   position: relative;
   margin: 0 auto;
-  top: -30%;
+  top: -10vh;
   font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 100;

@@ -44,93 +44,93 @@ export default function Mainpage() {
         <p className="wheat__p5">후나</p>
       </div>
       {/* <div style={{ position: "relative", height: "50px" }}></div> */}
-      <div class="work__projects">
-        <a
-          className="project"
-          target="blank"
-          onClick={() => {
-            navigate("/menu", {
-              state: {
-                cate: "coffee",
-              },
-            });
-          }}
-        >
-          <img
-            src="images/HomePageimg/coffee.jpeg"
-            alt="커피"
-            className="project__img"
-          />
-          <div className="project__description">
-            <h3>View more</h3>
-            <span>Coffee</span>
+      <div className="project_wrap">
+        <div className="work__projects">
+          <div
+            className="project"
+            target="blank"
+            onClick={() => {
+              navigate("/menu", {
+                state: {
+                  cate: "coffee",
+                },
+              });
+            }}
+          >
+            <img
+              src="images/HomePageimg/coffee.jpeg"
+              alt="커피"
+              className="project__img"
+            />
+            <div className="project__description">
+              <h3>View more</h3>
+              <span>Coffee</span>
+            </div>
           </div>
-        </a>
-        <div className="project" target="blank"></div>
-        <a
-          className="project"
-          target="blank"
-          onClick={() => {
-            navigate("/menu", {
-              state: {
-                cate: "bread",
-              },
-            });
-          }}
-        >
-          <img
-            src="images/HomePageimg/bread2.png"
-            alt="빵"
-            className="project__img"
-          />
-          <div className="project__description">
-            <h3>View more</h3>
-            <span>Bread</span>
+          <div
+            className="project"
+            target="blank"
+            onClick={() => {
+              navigate("/menu", {
+                state: {
+                  cate: "bread",
+                },
+              });
+            }}
+          >
+            <img
+              src="images/HomePageimg/bread2.png"
+              alt="빵"
+              className="project__img"
+            />
+            <div className="project__description">
+              <h3>View more</h3>
+              <span>Bread</span>
+            </div>
           </div>
-        </a>
-        <a
-          className="project"
-          target="blank"
-          onClick={() => {
-            navigate("/menu", {
-              state: {
-                cate: "cookie",
-              },
-            });
-          }}
-        >
-          <img
-            src="images/HomePageimg/coockie.png"
-            alt="쿠키"
-            className="project__img"
-          />
-          <div className="project__description">
-            <h3>View More</h3>
-            <span>coockies</span>
+          <div
+            className="project"
+            target="blank"
+            onClick={() => {
+              navigate("/menu", {
+                state: {
+                  cate: "cookie",
+                },
+              });
+            }}
+          >
+            <img
+              src="images/HomePageimg/coockie.png"
+              alt="쿠키"
+              className="project__img"
+            />
+            <div className="project__description">
+              <h3>View More</h3>
+              <span>coockies</span>
+            </div>
           </div>
-        </a>
-        <div className="project" target="blank"></div>
-        <a
-          className="project"
-          target="blank"
-          onClick={() => {
-            navigate("/menu", {
-              state: {
-                cate: "cake",
-              },
-            });
-          }}
-        >
-          <img
-            src="images/HomePageimg/cake.png"
-            alt="케이크"
-            className="project__img"
-          />
-          <div className="project__description">
-            <h3>View More</h3>
-            <span>Cake</span>
+          <div
+            className="project"
+            target="blank"
+            onClick={() => {
+              navigate("/menu", {
+                state: {
+                  cate: "cake",
+                },
+              });
+            }}
+          >
+            <img
+              src="images/HomePageimg/cake.png"
+              alt="케이크"
+              className="project__img"
+            />
+            <div className="project__description">
+              <h3>View More</h3>
+              <span>Cake</span>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </body>
   );
