@@ -61,7 +61,7 @@
   font-weight: 200;
   margin: 0;
 }
-.product_visual_text div > div > button {
+.product_visual_text div > div button {
   cursor: pointer;
   width: 100px;
   height: 30px;
@@ -72,7 +72,7 @@
   margin-top: 10px;
   transition:0.3s ease;
 }
-.product_visual_text div > div > button:hover{
+.product_visual_text div > div button:hover{
   background-color:#ccc;
   color:#000;
 }

@@ -45,7 +45,7 @@ const Productpage = () => {
               <div>
                 <h3>Price</h3>
                 <p>{product_post?.price}</p>
-                <button>Reservation</button>
+                <Link to="/reservation"><button>Reservation</button></Link>
               </div>
             </div>
             {/* 메인 비주얼 오른쪽 텍스트 */}

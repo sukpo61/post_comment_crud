@@ -7,8 +7,8 @@
       "content": "123",
       "date": "2022.12.26.",
       "time": "16:22"
-    }],
-    
+    }
+  ],
   "comments": [],
   "product_posts": [
     {
@@ -738,17 +738,34 @@
       "content": "fdsafsdaf",
       "title": "dfsa",
       "toggledisplay": false
-    }
-  ]
-}
-{
-  [
-   {
-      "id": "00bf87ac-8bbd-8318-a383-8dec9a754d02",
-      "product_post_id": "19",
-      "content": "fsdfsdf",
-      "title": "fdsf",
+    },
+    {
+      "id": "9d403b57-26af-c704-9283-42a57fc492ec",
+      "product_post_id": "1",
+      "content": "sdf",
+      "title": "sdf",
       "toggledisplay": false
+    },
+    {
+      "id": "95579801-3f88-8ed6-607c-0fa825408bc3",
+      "product_post_id": "20",
+      "content": "asdf",
+      "title": "asdfas",
+      "toggledisplay": false
+    },
+    {
+      "id": "d7aa5795-51ff-ca79-dda7-26517b993a8f",
+      "product_post_id": "30",
+      "content": "30페이지",
+      "title": "신정근 ",
+      "toggledisplay": false
+    },
+    {
+      "id": "a8a12549-f495-0cce-f5be-d66bb532af4e",
+      "product_post_id": "19",
+      "content": "asdf",
+      "title": "sadf",
+      "toggledisplay": true
     }
   ]
 }
