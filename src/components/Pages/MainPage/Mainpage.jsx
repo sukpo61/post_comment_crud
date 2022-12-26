@@ -32,7 +32,11 @@ export default function Mainpage() {
         />
       </div>
       <div className="background">
-        <img className="bakery" src="images/HomePageimg/toast.png" alt="빵집" />
+        <img
+          className="bakery"
+          src="images/HomePageimg/secondimg.png"
+          alt="빵집"
+        />
       </div>
       <div className="back"></div>
       <img className="wheat" src="images/HomePageimg/wheat.png" alt="밀밭" />
@@ -41,7 +45,6 @@ export default function Mainpage() {
         <p className="wheat__p2">우리의 것으로</p>
         <p className="wheat__p3">우리의 미래를</p>
         <p className="wheat__p4">만들어 갑니다</p>
-        <p className="wheat__p5">후나</p>
       </div>
       {/* <div style={{ position: "relative", height: "50px" }}></div> */}
       <div className="project_wrap">
