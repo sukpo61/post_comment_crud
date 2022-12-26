@@ -25,7 +25,7 @@ const Router = () => {
         <Route path="/productpage/:id" element={<ProductPage />} />
         <Route path="/menu" element={<MenuPage />} />
       </Routes>
-      <Footer></Footer>
+      <Footer />
     </BrowserRouter>
   );
 };
