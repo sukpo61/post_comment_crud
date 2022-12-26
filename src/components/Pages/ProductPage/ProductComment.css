@@ -1,0 +1,139 @@
+.productComment {
+  width: 1400px;
+  margin: 0 auto;
+}
+.productComment > h2 {
+  margin: 150px 0 30px 0 !important;
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+}
+.productComment form {
+  display: flex;
+}
+.productComment form input::placeholder {
+  color: #ccc;
+  font-size: 16px;
+  font-weight: 200;
+}
+.productComment form input:first-child {
+  text-indent: 10px;
+  width: 200px;
+  height: 50px;
+  border-radius: 0;
+  border: 1px solid #212121;
+  font-size: 16px;
+  border-right: 0;
+  box-sizing: border-box;
+}
+.productComment form input:nth-child(2) {
+  text-indent: 10px;
+
+  font-size: 16px;
+  width: 1050px;
+  height: 50px;
+  border: 1px solid #212121;
+  border-right: 0;
+
+  border-radius: 0;
+  box-sizing: border-box;
+}
+.productComment form button {
+  cursor: pointer;
+  border: 1px solid #212121;
+  box-sizing: border-box;
+  height: 50px;
+  width: 150px;
+  background-color: #fff;
+  transition:0.3s ease;
+}
+.productComment form button:hover{
+  background-color:#727272;
+  color:#fff;
+}
+
+.productCommentContents div {
+  display: flex;
+  align-items: center;
+}
+
+.productCommentContents div p {
+  height:25px;
+  padding-left: 10px;
+}
+.productCommentTitle {
+  margin-top: 40px;
+}
+.productCommentTitle p:first-child {
+  width: 200px;
+  border-bottom: 2px solid #212121;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.productCommentTitle p:last-child {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  width: 1200px;
+  border-bottom: 2px solid #212121;
+}
+.productCommentText {
+  display:flex !important; 
+  border-bottom: 1px solid #ccc;
+}
+.productCommentText form p:first-child {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 200px;
+}
+.productCommentText form p:last-child {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 1000px;
+}
+.productCommentText button {
+  width: 45px;
+  height: 25px;
+}
+.productCommentText form > div {
+  margin-left: auto;
+}
+.productCommentText button {
+  margin-right: 10px;
+  background: #fff;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 0.3s;
+  width:40px;
+  height:25px;
+}
+.productCommentText form > button {
+  margin-left:auto;
+  margin-right: 10px;
+  background: #fff;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 0.3s;
+  width:40px;
+  height:25px;
+}
+.productCommentText button:hover {
+  background: #727272;
+  color: #fff;
+}
+.productCommentText form{
+  width:1400px;
+  display:flex;
+  align-items:center;
+}
+.productCommentText form p{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.productCommentText form input{
+  width: 200px !important;
+  height:25px !important;
+  border:1px solid #212121 !important;
+  text-indent: 5px !important;
+}
