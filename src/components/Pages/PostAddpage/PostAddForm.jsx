@@ -6,6 +6,7 @@ import uuid from "react-uuid";
 import { useNavigate } from "react-router-dom";
 import Reservation_Topimage from "../../Layout/Reservation_Topimage";
 import { postTime } from "../../Layout/PostTime";
+import CusttomButton from "../../Tools/CusttomButton";
 
 const PostAddForm = () => {
   const [title, setTitle] = useState("");
@@ -14,15 +15,6 @@ const PostAddForm = () => {
   const navigate = useNavigate();
 
   const { PostDate, PostTime } = postTime();
-
-  // console.log(PostDate, PostTime);
-
-  // const dateinfo = new Date();
-  // const hours = ("0" + dateinfo.getHours()).slice(-2);
-  // const minutes = ("0" + dateinfo.getMinutes()).slice(-2);
-
-  // const date = dateinfo.toLocaleDateString("ko-kr").replace(" ", "");
-  // const time = hours + ":" + minutes;
 
   const NameArray = [
     "아드리아",
@@ -92,7 +84,7 @@ const PostAddForm = () => {
           <PostButtonWrap>
             <CusttomButton>예약</CusttomButton>
             <CusttomButton
-              onClick={() => {
+              onClickFuntion={() => {
                 navigate("/");
               }}
             >
@@ -111,18 +103,6 @@ const PostButtonWrap = styled.div`
   flex-direction: row-reverse;
   gap: 20px;
   margin-top: 15px;
-`;
-
-const CusttomButton = styled.button`
-  margin: ${(props) => props.Margin};
-  width: 65px;
-  height: 30px;
-  cursor: pointer;
-  border: 0.5px solid #a5a5a5;
-  border-radius: 30px;
-  font-weight: 200;
-  font-size: 12px;
-  color: #000000;
 `;
 
 const Wrap = styled.div`

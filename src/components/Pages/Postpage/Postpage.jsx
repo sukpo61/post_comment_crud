@@ -12,6 +12,7 @@ import { __getPost } from "../../../redux/modules/posts";
 import { useLocation, useNavigate } from "react-router-dom";
 import { __deletePost, __updatePost } from "../../../redux/modules/posts";
 import Reservation_Topimage from "../../Layout/Reservation_Topimage";
+import CusttomButton from "../../Tools/CusttomButton";
 
 const Postpage = () => {
   const dispatch = useDispatch();
@@ -45,18 +46,22 @@ const Postpage = () => {
       <PostpageWrap>
         <PostButtonWrap>
           <div>
-            <CusttomButton onClick={DeletePost}>삭제</CusttomButton>
-            <CusttomButton Margin="0 0 0 15px" onClick={EditPost}>
+            <CusttomButton onClickFuntion={DeletePost}>삭제</CusttomButton>
+            <CusttomButton Margin="0 0 0 15px" onClickFuntion={EditPost}>
               수정
             </CusttomButton>
           </div>
-          <ListButton
-            onClick={() => {
+          <CusttomButton
+            Color="#6a503c"
+            Border="none"
+            BorderRadius="0px"
+            BackColor="#e3d1b3"
+            onClickFuntion={() => {
               navigate("/");
             }}
           >
             목록
-          </ListButton>
+          </CusttomButton>
         </PostButtonWrap>
         <TableHeader>
           <PostTitle>
@@ -119,20 +124,21 @@ const TableHeader = styled.div`
   border-bottom: 1px solid #000000;
 `;
 
-const CusttomButton = styled.button`
-  margin: ${(props) => props.Margin};
-  width: 65px;
-  height: 30px;
-  cursor: pointer;
-  border: 0.5px solid #a5a5a5;
-  border-radius: 30px;
-  font-weight: 200;
-  font-size: 12px;
-  color: #000000;
-`;
+// const CusttomButton = styled.button`
+//   margin: ${(props) => props.Margin};
+//   width: 65px;
+//   height: 30px;
+//   cursor: pointer;
+//   border: 0.5px solid #a5a5a5;
+//   border-radius: 30px;
+//   font-weight: 200;
+//   font-size: 12px;
+//   color: #000000;
+// `;
+
 const ListButton = styled.button`
   margin: ${(props) => props.Margin};
-  width: 65px;
+  width: 60px;
   height: 30px;
   cursor: pointer;
   font-weight: 200;

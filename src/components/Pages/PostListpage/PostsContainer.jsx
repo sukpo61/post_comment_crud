@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { __getPost } from "../../../redux/modules/posts";
 import { useLocation, useNavigate } from "react-router-dom";
 import Reservation_Topimage from "../../Layout/Reservation_Topimage";
+import CusttomButton from "../../Tools/CusttomButton";
 
 const PostsContainer = () => {
   const dispatch = useDispatch();
@@ -48,7 +49,11 @@ const PostsContainer = () => {
 
         <PostButtonWrap>
           <CusttomButton
-            onClick={() => {
+            Border="none"
+            BackColor="#d3c1b3"
+            Color=" #fbf9f6"
+            FontWeight="700"
+            onClickFuntion={() => {
               navigate("/addform");
             }}
           >
@@ -141,17 +146,4 @@ const PostButtonWrap = styled.div`
   align-items: center;
   flex-direction: row-reverse;
   margin-bottom: 40px;
-`;
-
-const CusttomButton = styled.button`
-  width: 60px;
-  height: 30px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  color: #fbf9f6;
-  background: #d3c1b3;
-  border-radius: 15px;
 `;

@@ -25,10 +25,8 @@ const PostContainer = ({ post, index }) => {
 
   return (
     <CommentWrap>
-      <TableTd Width="80px" Position="center">
-        {index}
-      </TableTd>
-      <TableTd Width="560px">
+      <TableTd Width="80px">{index}</TableTd>
+      <TableTd Width="560px" Position="flex-start">
         <span
           onClick={() => {
             navigate(`/${post.id}`);
@@ -37,19 +35,15 @@ const PostContainer = ({ post, index }) => {
           {post.title}
         </span>
       </TableTd>
-      <TableTd Width="100px" Position="center">
+      <TableTd Width="100px">
         {comment_len === 0 ? (
           <Resered>예약중</Resered>
         ) : (
           <ReserDone>완료</ReserDone>
         )}
       </TableTd>
-      <TableTd Width="130px" Position="center">
-        {post.name}
-      </TableTd>
-      <TableTd Width="130px" Position="center">
-        {post.date}
-      </TableTd>
+      <TableTd Width="130px">{post.name}</TableTd>
+      <TableTd Width="130px">{post.date}</TableTd>
     </CommentWrap>
   );
 };
@@ -96,6 +90,10 @@ const TableTd = styled.div`
   }
 `;
 
+TableTd.defaultProps = {
+  Position: "center",
+};
+
 const CommentWrap = styled.div`
   width: 100%;
   height: 50px;
@@ -104,13 +102,6 @@ const CommentWrap = styled.div`
   align-items: center;
   flex-direction: row;
   border-bottom: 1px solid #eee;
-`;
-
-const CusttomButton = styled.button`
-  width: 50px;
-  height: 30px;
-  cursor: pointer;
-  border: 1px solid #eee;
 `;
 
 export default PostContainer;

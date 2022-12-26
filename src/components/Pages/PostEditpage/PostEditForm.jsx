@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { __addPost, __updatePost } from "../../../redux/modules/posts";
 import { useNavigate, useLocation } from "react-router-dom";
 import Reservation_Topimage from "../../Layout/Reservation_Topimage";
+import CusttomButton from "../../Tools/CusttomButton";
 
 const PostEditForm = () => {
   const { state } = useLocation();
@@ -58,13 +59,13 @@ const PostEditForm = () => {
           <PostButtonWrap>
             <CusttomButton>수정</CusttomButton>
             <CusttomButton
-              onClick={() => {
+              onClickFuntion={() => {
                 navigate(`/${state.id}`);
               }}
             >
               취소
             </CusttomButton>
-          </PostButtonWrap>{" "}
+          </PostButtonWrap>
         </Form>
       </AddWrap>
     </Wrap>
@@ -139,16 +140,16 @@ const ContentInput = styled.textarea`
   padding: 10px 10px;
 `;
 
-const CusttomButton = styled.button`
-  margin: ${(props) => props.Margin};
-  width: 65px;
-  height: 30px;
-  cursor: pointer;
-  border: 0.5px solid #a5a5a5;
-  border-radius: 30px;
-  font-weight: 200;
-  font-size: 12px;
-  color: #000000;
-`;
+// const CusttomButton = styled.button`
+//   margin: ${(props) => props.Margin};
+//   width: 65px;
+//   height: 30px;
+//   cursor: pointer;
+//   border: 0.5px solid #a5a5a5;
+//   border-radius: 30px;
+//   font-weight: 200;
+//   font-size: 12px;
+//   color: #000000;
+// `;
 
 export default PostEditForm;
