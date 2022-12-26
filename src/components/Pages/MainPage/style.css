@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Chosunilbo_myungjo";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
-    format("woff");
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 }
 
 .mainText__null {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   position: fixed;
   top: 25%;
   z-index: 1;
@@ -76,13 +76,13 @@
 .wheat__p3,
 .wheat__p4,
 .wheat__p5 {
-  color: rgb(149, 151, 160);
+  color: rgb(119, 121, 131);
   font-size: 40px;
   float: right;
   writing-mode: vertical-rl;
-  font-family: "Chosunilbo_myungjo";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
-    format("woff");
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff')
+    format('woff');
   font-weight: 400;
   font-style: normal;
   padding: 5px;
@@ -113,6 +113,7 @@
   background-color: white;
   /* z-index: 1; */
   margin-top: 700px;
+  padding: 20px 0;
 }
 
 .project {
@@ -163,7 +164,7 @@
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   width: 25px;
   height: 2px;
   background-color: rgb(56, 52, 52);

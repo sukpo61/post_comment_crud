@@ -75,6 +75,7 @@ a {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  /* margin-left: 3%; */
 }
 
 .scroll:hover {
