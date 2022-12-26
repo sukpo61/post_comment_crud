@@ -43,7 +43,6 @@ function MenuList() {
         </div>
       </div>
       <div className='menu_list'>
-        {/* 만약 카테고리에 해당하는 제품이 하나도 없다면 준비중이라고 띄울 것 */}
         {product_posts.map(
           (item) =>
             item.productMenu === currProductMenu && (
