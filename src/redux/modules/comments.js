@@ -46,8 +46,8 @@ export const __deleteAllComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       let data = await axios.get("http://localhost:3003/comments");
-
-      for (var comment of data.data) {
+      console.log(data);
+      for (let comment of data.data) {
         if (comment.post_id === payload) {
           await axios.delete(`http://localhost:3003/comments/${comment.id}`);
         }
