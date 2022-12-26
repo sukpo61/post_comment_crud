@@ -9,7 +9,7 @@ import Footer from "../components/Layout/Footer";
 import ScrollToTop from "../components/Layout/ScrollToTop";
 import Mainpage from "../components/Pages/MainPage/Mainpage";
 import ProductPage from "../components/Pages/ProductPage/ProductPage";
-import MenuPage from "../components/Pages/MenuPage/MenuPage";
+import MenuList from "../components/Pages/MenuPage/MenuList";
 
 const Router = () => {
   return (
@@ -23,7 +23,7 @@ const Router = () => {
         <Route path="/editform" element={<PostEditForm />} />
         <Route path="/reservation/:id" element={<Postpage />} />
         <Route path="/productpage/:id" element={<ProductPage />} />
-        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/menu" element={<MenuList />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
