@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import "./MenuPage.css";
-import { __getProductpost } from "../../../redux/modules/productposts";
-import { useNavigate, useLocation } from "react-router";
-// useParams가져와서 props를 받아서 어쩌구 하면 헤더가 고정된다..............
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import './MenuPage.css';
+import { __getProductpost } from '../../../redux/modules/productposts';
+import { useNavigate, useLocation } from 'react-router';
 
 const MenuList = () => {
   const { state } = useLocation();
@@ -27,36 +26,36 @@ const MenuList = () => {
   };
 
   return (
-    <div className="menu_page">
-      <p className="menu_header">MENU</p>
-      <div className="menu_bar">
-        <div className="menu1" onClick={handleClick("bread")}>
+    <div className='menu_page'>
+      <p className='menu_header'>MENU</p>
+      <div className='menu_bar'>
+        <div className='menu1' onClick={handleClick('bread')}>
           Bread
         </div>
-        <div className="menu2" onClick={handleClick("cake")}>
+        <div className='menu2' onClick={handleClick('cake')}>
           Cake
         </div>
-        <div className="menu3" onClick={handleClick("cookie")}>
+        <div className='menu3' onClick={handleClick('cookie')}>
           Cookie
         </div>
-        <div className="menu4" onClick={handleClick("coffee")}>
+        <div className='menu4' onClick={handleClick('coffee')}>
           Coffee
         </div>
       </div>
-      <div className="menu_list">
+      <div className='menu_list'>
         {product_posts.map((item) => {
           if (item.productmenu === currProductMenu) {
             return (
-              <div className="menu_product" key={item.id}>
+              <div className='menu_product' key={item.id}>
                 <img
-                  className="image"
+                  className='image'
                   src={item.detail2}
                   onClick={() => {
                     navigate(`/productpage/${item.id}`);
                   }}
                 />
-                <p className="title">{item.title}</p>
-                <p className="engtitle">{item.engtitle}</p>
+                <p className='title'>{item.title}</p>
+                <p className='engtitle'>{item.engtitle}</p>
               </div>
             );
           }
