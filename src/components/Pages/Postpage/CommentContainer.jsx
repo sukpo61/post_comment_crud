@@ -43,7 +43,6 @@ const CommentContainer = ({ post }) => {
   };
 
   const ToggleComment = (content) => {
-    console.log(post);
     if (post.toggledisplay) {
       ButtonDisabledTrue();
       setContent(content);

@@ -18,7 +18,6 @@ export const __addproduct_posts = createAsyncThunk(
   "Productposts/addProductpost",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.post("http://localhost:3003/product_posts", payload);
       const data = await axios.get("http://localhost:3003/product_posts");
       return thunkAPI.fulfillWithValue(data.data);
@@ -32,10 +31,8 @@ export const __deleteproduct_posts = createAsyncThunk(
   "Productposts/deleteProductpost",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.delete(`http://localhost:3003/product_posts/${payload}`);
       const data = await axios.get("http://localhost:3003/product_posts");
-      console.log(data.data);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -47,13 +44,11 @@ export const __updateproduct_posts = createAsyncThunk(
   "Productposts/updateProductpost",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.patch(
         `http://localhost:3003/product_posts/${payload.id}`,
         payload
       );
       const data = await axios.get("http://localhost:3003/product_posts");
-      console.log(data.data);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -100,14 +95,12 @@ const product_postsSlice = createSlice({
     },
     toggleDisplay: (state, action) => {
       let postlist = state.product_posts.slice();
-      // console.log(postlist);
       postlist.find((e) => e.id === action.payload).displaytoggle =
         !postlist.find((e) => e.id === action.payload).displaytoggle;
       state.product_posts = postlist;
     },
     updatepost: (state, action) => {
       let postlist = state.product_posts.slice();
-      console.log(action.payload);
       // postlist.find((e) => e.id === action.payload.id) =
       //   action.payload;
       // state.posts = postlist;

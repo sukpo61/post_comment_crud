@@ -19,9 +19,10 @@ const Productpage = () => {
 
   //   const param = useParams();
   const param = useParams();
-  const product_post = product_posts.find((product_post) => product_post.id === param.id);
+  const product_post = product_posts.find(
+    (product_post) => product_post.id === param.id
+  );
   // const product_post = product_posts.find((t) => t.id === "18");
-  console.log(product_post)
 
   useEffect(() => {
     dispatch(__getProductpost());
@@ -45,7 +46,9 @@ const Productpage = () => {
               <div>
                 <h3>Price</h3>
                 <p>{product_post?.price}</p>
-                <Link to="/reservation"><button>Reservation</button></Link>
+                <Link to="/reservation">
+                  <button>Reservation</button>
+                </Link>
               </div>
             </div>
             {/* 메인 비주얼 오른쪽 텍스트 */}

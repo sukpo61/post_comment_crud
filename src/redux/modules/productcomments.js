@@ -1,11 +1,11 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 export const __getproduct_comments = createAsyncThunk(
-  'product_comments/getproduct_comments',
+  "product_comments/getproduct_comments",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get('http://localhost:3003/product_comments');
+      const data = await axios.get("http://localhost:3003/product_comments");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -14,11 +14,11 @@ export const __getproduct_comments = createAsyncThunk(
 );
 
 export const __addproduct_comments = createAsyncThunk(
-  'product_comments/addproduct_comments',
+  "product_comments/addproduct_comments",
   async (payload, thunkAPI) => {
     try {
-      await axios.post('http://localhost:3003/product_comments', payload);
-      const data = await axios.get('http://localhost:3003/product_comments');
+      await axios.post("http://localhost:3003/product_comments", payload);
+      const data = await axios.get("http://localhost:3003/product_comments");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -27,13 +27,11 @@ export const __addproduct_comments = createAsyncThunk(
 );
 
 export const __deleteproduct_comments = createAsyncThunk(
-  'product_comments/deleteproduct_comments',
+  "product_comments/deleteproduct_comments",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.delete(`http://localhost:3003/product_comments/${payload}`);
-      const data = await axios.get('http://localhost:3003/product_comments');
-      console.log(data.data);
+      const data = await axios.get("http://localhost:3003/product_comments");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -42,10 +40,10 @@ export const __deleteproduct_comments = createAsyncThunk(
 );
 
 export const __deleteAllproduct_comments = createAsyncThunk(
-  'product_comments/deleteproduct_comments',
+  "product_comments/deleteproduct_comments",
   async (payload, thunkAPI) => {
     try {
-      let data = await axios.get('http://localhost:3003/product_comments');
+      let data = await axios.get("http://localhost:3003/product_comments");
 
       for (var product_comments of data.data) {
         if (product_comments.product_post_id === payload) {
@@ -55,7 +53,7 @@ export const __deleteAllproduct_comments = createAsyncThunk(
         }
       }
 
-      data = await axios.get('http://localhost:3003/product_comments');
+      data = await axios.get("http://localhost:3003/product_comments");
 
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -65,33 +63,20 @@ export const __deleteAllproduct_comments = createAsyncThunk(
 );
 
 export const __updateproduct_comments = createAsyncThunk(
-  'product_comments/updateproduct_comments',
+  "product_comments/updateproduct_comments",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.patch(
         `http://localhost:3003/product_comments/${payload.id}`,
         payload
       );
-      const data = await axios.get('http://localhost:3003/product_comments');
+      const data = await axios.get("http://localhost:3003/product_comments");
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
   }
 );
-
-// export const __getcomments = createAsyncThunk(
-//   "comments/getcomments",
-//   async (payload, thunkAPI) => {
-//     try {
-//       const data = await axios.get("http://localhost:3003/comments");
-//       console.log(data);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-// );
 
 const initialState = {
   product_comments: [
@@ -115,7 +100,7 @@ const initialState = {
 };
 
 const product_commentsSlice = createSlice({
-  name: 'product_comments',
+  name: "product_comments",
   initialState,
   reducers: {
     addproduct_comments: (state, action) => {

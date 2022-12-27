@@ -47,8 +47,6 @@ const PostAddForm = () => {
       time: PostTime,
     };
 
-    console.log(NewData);
-
     dispatch(__addPost(NewData));
     setTitle("");
     setContent("");

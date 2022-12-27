@@ -30,10 +30,8 @@ export const __deleteComment = createAsyncThunk(
   "comments/deletecomment",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.delete(`http://localhost:3003/comments/${payload}`);
       const data = await axios.get("http://localhost:3003/comments");
-      console.log(data.data);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -46,7 +44,6 @@ export const __deleteAllComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       let data = await axios.get("http://localhost:3003/comments");
-      console.log(data);
       for (let comment of data.data) {
         if (comment.post_id === payload) {
           await axios.delete(`http://localhost:3003/comments/${comment.id}`);

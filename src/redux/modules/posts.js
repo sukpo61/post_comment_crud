@@ -6,7 +6,6 @@ export const __getPost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const data = await axios.get("http://localhost:3003/posts");
-      console.log(data);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -18,7 +17,6 @@ export const __addPost = createAsyncThunk(
   "posts/addPost",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.post("http://localhost:3003/posts", payload);
       const data = await axios.get("http://localhost:3003/posts");
       return thunkAPI.fulfillWithValue(data.data);
@@ -32,10 +30,8 @@ export const __deletePost = createAsyncThunk(
   "posts/deletePost",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.delete(`http://localhost:3003/posts/${payload}`);
       const data = await axios.get("http://localhost:3003/posts");
-      console.log(data.data);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -47,28 +43,14 @@ export const __updatePost = createAsyncThunk(
   "posts/updatePost",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.patch(`http://localhost:3003/posts/${payload.id}`, payload);
       const data = await axios.get("http://localhost:3003/posts");
-      console.log(data.data);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
   }
 );
-
-// export const __getposts = createAsyncThunk(
-//   "posts/getposts",
-//   async (payload, thunkAPI) => {
-//     try {
-//       const data = await axios.get("http://localhost:3003/posts");
-//       console.log(data);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-// );
 
 const initialState = {
   posts: [
@@ -108,14 +90,12 @@ const postsSlice = createSlice({
     },
     toggleDisplay: (state, action) => {
       let postlist = state.posts.slice();
-      // console.log(postlist);
       postlist.find((e) => e.id === action.payload).displaytoggle =
         !postlist.find((e) => e.id === action.payload).displaytoggle;
       state.posts = postlist;
     },
     updatepost: (state, action) => {
       let postlist = state.posts.slice();
-      console.log(action.payload);
       // postlist.find((e) => e.id === action.payload.id) =
       //   action.payload;
       // state.posts = postlist;

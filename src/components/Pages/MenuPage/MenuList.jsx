@@ -19,8 +19,6 @@ const MenuList = () => {
   // 데이터 read해오는 함수
   const { product_posts } = useSelector((state) => state.product_posts);
 
-  console.log(product_posts);
-
   const [currProductMenu, setCurrProductMenu] = useState(state.cate);
 
   // product_posts 저장값 중 하나인 productmenu값을 카테고리와 연결하여 state변경을 일으키는 함수
@@ -48,7 +46,6 @@ const MenuList = () => {
       <div className="menu_list">
         {product_posts.map((item) => {
           if (item.productmenu === currProductMenu) {
-            console.log(item);
             return (
               <div className="menu_product" key={item.id}>
                 <img

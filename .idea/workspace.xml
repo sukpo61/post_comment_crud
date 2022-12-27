@@ -4,14 +4,7 @@
     <list default="true" id="4381030f-5d2b-4426-b7f8-a8c9c374993f" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Reservation_Topimage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Reservation_Topimage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/MainPage/Mainpage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/MainPage/Mainpage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/MainPage/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/MainPage/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/Modal/Modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PostAddpage/PostAddForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/PostAddpage/PostAddForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PostEditpage/PostEditForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/PostEditpage/PostEditForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PostListpage/PostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/PostListpage/PostsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Postpage/Postpage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/Postpage/Postpage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
