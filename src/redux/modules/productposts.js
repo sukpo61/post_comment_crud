@@ -7,7 +7,7 @@ export const __getProductpost = createAsyncThunk(
   'productposts/getproductpost',
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get(AXIOS_ADDRESS / product_posts);
+      const data = await axios.get(`${AXIOS_ADDRESS}/product_posts`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -20,7 +20,7 @@ export const __addproduct_posts = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.post(AXIOS_ADDRESS, payload);
-      const data = await axios.get(AXIOS_ADDRESS / product_posts);
+      const data = await axios.get(`${AXIOS_ADDRESS}/product_posts`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -49,7 +49,7 @@ export const __updateproduct_posts = createAsyncThunk(
         `${AXIOS_ADDRESS}/product_posts/${payload.id}`,
         payload
       );
-      const data = await axios.get(AXIOS_ADDRESS / product_posts);
+      const data = await axios.get(`${AXIOS_ADDRESS}/product_posts`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
