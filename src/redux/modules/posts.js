@@ -1,11 +1,11 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+import AXIOS_ADDRESS from './constant';
 export const __getPost = createAsyncThunk(
-  "posts/getPost",
+  'posts/getPost',
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3003/posts");
+      const data = await axios.get(`${AXIOS_ADDRESS}/posts`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -14,11 +14,11 @@ export const __getPost = createAsyncThunk(
 );
 
 export const __addPost = createAsyncThunk(
-  "posts/addPost",
+  'posts/addPost',
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3003/posts", payload);
-      const data = await axios.get("http://localhost:3003/posts");
+      await axios.post(`${AXIOS_ADDRESS}/posts`, payload);
+      const data = await axios.get(`${AXIOS_ADDRESS}/posts`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -27,11 +27,11 @@ export const __addPost = createAsyncThunk(
 );
 
 export const __deletePost = createAsyncThunk(
-  "posts/deletePost",
+  'posts/deletePost',
   async (payload, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:3003/posts/${payload}`);
-      const data = await axios.get("http://localhost:3003/posts");
+      await axios.delete(`${AXIOS_ADDRESS}/posts${payload}`);
+      const data = await axios.get(`${AXIOS_ADDRESS}/posts`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -40,11 +40,11 @@ export const __deletePost = createAsyncThunk(
 );
 
 export const __updatePost = createAsyncThunk(
-  "posts/updatePost",
+  'posts/updatePost',
   async (payload, thunkAPI) => {
     try {
-      await axios.patch(`http://localhost:3003/posts/${payload.id}`, payload);
-      const data = await axios.get("http://localhost:3003/posts");
+      await axios.patch(`${AXIOS_ADDRESS}/posts${payload.id}`, payload);
+      const data = await axios.get(`${AXIOS_ADDRESS}/posts`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -56,13 +56,13 @@ const initialState = {
   posts: [
     {
       id: 1,
-      title: "제목1",
-      content: "내용1",
+      title: '제목1',
+      content: '내용1',
     },
     {
       id: 2,
-      title: "제목2",
-      content: "내용2",
+      title: '제목2',
+      content: '내용2',
     },
   ],
   isLoading: false,
@@ -70,7 +70,7 @@ const initialState = {
 };
 
 const postsSlice = createSlice({
-  name: "posts",
+  name: 'posts',
   initialState,
   reducers: {
     addpost: (state, action) => {

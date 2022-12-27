@@ -19,7 +19,7 @@ export const __addComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.post(AXIOS_ADDRESS, payload);
-      const data = await axios.get(AXIOS_ADDRESS);
+      const data = await axios.get(`${AXIOS_ADDRESS}/comments`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -31,8 +31,8 @@ export const __deleteComment = createAsyncThunk(
   'comments/deletecomment',
   async (payload, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:3003/comments/${payload}`);
-      const data = await axios.get(AXIOS_ADDRESS.comment);
+      await axios.delete(`${AXIOS_ADDRESS}/comments/${payload}`);
+      const data = await axios.get(`${AXIOS_ADDRESS}/comments`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -44,14 +44,14 @@ export const __deleteAllComment = createAsyncThunk(
   'comments/deletecomment',
   async (payload, thunkAPI) => {
     try {
-      let data = await axios.get('http://localhost:3003/comments');
+      let data = await axios.get(`${AXIOS_ADDRESS}/comments`);
       for (let comment of data.data) {
         if (comment.post_id === payload) {
-          await axios.delete(`http://localhost:3003/comments/${comment.id}`);
+          await axios.delete(`${AXIOS_ADDRESS}/comments/${comment.id}`);
         }
       }
 
-      data = await axios.get('http://localhost:3003/comments');
+      data = await axios.get(`${AXIOS_ADDRESS}/comments`);
 
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -65,10 +65,10 @@ export const __updateComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
-        `http://localhost:3003/comments/${payload.id}`,
+        `${AXIOS_ADDRESS}/comments/comments/${payload.id}`,
         payload
       );
-      const data = await axios.get('http://localhost:3003/comments');
+      const data = await axios.get(`${AXIOS_ADDRESS}/comments`);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
