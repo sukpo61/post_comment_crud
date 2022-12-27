@@ -1,12 +1,13 @@
 //제품불러오기
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+import AXIOS_ADDRESS from './constant';
 
 export const __getProductpost = createAsyncThunk(
-  "productposts/getproductpost",
+  'productposts/getproductpost',
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3003/product_posts");
+      const data = await axios.get(AXIOS_ADDRESS / product_posts);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -15,11 +16,11 @@ export const __getProductpost = createAsyncThunk(
 );
 
 export const __addproduct_posts = createAsyncThunk(
-  "Productposts/addProductpost",
+  'Productposts/addProductpost',
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3003/product_posts", payload);
-      const data = await axios.get("http://localhost:3003/product_posts");
+      await axios.post(AXIOS_ADDRESS, payload);
+      const data = await axios.get(AXIOS_ADDRESS / product_posts);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -28,11 +29,11 @@ export const __addproduct_posts = createAsyncThunk(
 );
 
 export const __deleteproduct_posts = createAsyncThunk(
-  "Productposts/deleteProductpost",
+  'Productposts/deleteProductpost',
   async (payload, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:3003/product_posts/${payload}`);
-      const data = await axios.get("http://localhost:3003/product_posts");
+      await axios.delete(`${AXIOS_ADDRESS}/product_posts/${payload}`);
+      const data = await axios.get(AXIOS_ADDRESS);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -41,14 +42,14 @@ export const __deleteproduct_posts = createAsyncThunk(
 );
 
 export const __updateproduct_posts = createAsyncThunk(
-  "Productposts/updateProductpost",
+  'Productposts/updateProductpost',
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
-        `http://localhost:3003/product_posts/${payload.id}`,
+        `${AXIOS_ADDRESS}/product_posts/${payload.id}`,
         payload
       );
-      const data = await axios.get("http://localhost:3003/product_posts");
+      const data = await axios.get(AXIOS_ADDRESS / product_posts);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -60,13 +61,13 @@ const initialState = {
   product_posts: [
     {
       id: 1,
-      title: "제목1",
-      content: "내용1",
+      title: '제목1',
+      content: '내용1',
     },
     {
       id: 2,
-      title: "제목2",
-      content: "내용2",
+      title: '제목2',
+      content: '내용2',
     },
   ],
   isLoading: false,
@@ -74,7 +75,7 @@ const initialState = {
 };
 
 const product_postsSlice = createSlice({
-  name: "product_posts",
+  name: 'product_posts',
   initialState,
   reducers: {
     addpost: (state, action) => {

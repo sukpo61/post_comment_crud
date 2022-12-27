@@ -1,11 +1,12 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+import AXIOS_ADDRESS from './constant';
 
 export const __getComment = createAsyncThunk(
-  "comments/getcomment",
+  'comments/getcomment',
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3003/comments");
+      const data = await axios.get();
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -14,11 +15,11 @@ export const __getComment = createAsyncThunk(
 );
 
 export const __addComment = createAsyncThunk(
-  "comments/addcomment",
+  'comments/addcomment',
   async (payload, thunkAPI) => {
     try {
-      await axios.post("http://localhost:3003/comments", payload);
-      const data = await axios.get("http://localhost:3003/comments");
+      await axios.post(AXIOS_ADDRESS, payload);
+      const data = await axios.get(AXIOS_ADDRESS);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -27,11 +28,11 @@ export const __addComment = createAsyncThunk(
 );
 
 export const __deleteComment = createAsyncThunk(
-  "comments/deletecomment",
+  'comments/deletecomment',
   async (payload, thunkAPI) => {
     try {
       await axios.delete(`http://localhost:3003/comments/${payload}`);
-      const data = await axios.get("http://localhost:3003/comments");
+      const data = await axios.get(AXIOS_ADDRESS.comment);
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -40,17 +41,17 @@ export const __deleteComment = createAsyncThunk(
 );
 
 export const __deleteAllComment = createAsyncThunk(
-  "comments/deletecomment",
+  'comments/deletecomment',
   async (payload, thunkAPI) => {
     try {
-      let data = await axios.get("http://localhost:3003/comments");
+      let data = await axios.get('http://localhost:3003/comments');
       for (let comment of data.data) {
         if (comment.post_id === payload) {
           await axios.delete(`http://localhost:3003/comments/${comment.id}`);
         }
       }
 
-      data = await axios.get("http://localhost:3003/comments");
+      data = await axios.get('http://localhost:3003/comments');
 
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -60,14 +61,14 @@ export const __deleteAllComment = createAsyncThunk(
 );
 
 export const __updateComment = createAsyncThunk(
-  "comments/updatecomment",
+  'comments/updatecomment',
   async (payload, thunkAPI) => {
     try {
       await axios.patch(
         `http://localhost:3003/comments/${payload.id}`,
         payload
       );
-      const data = await axios.get("http://localhost:3003/comments");
+      const data = await axios.get('http://localhost:3003/comments');
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -109,7 +110,7 @@ const initialState = {
 };
 
 const commentsSlice = createSlice({
-  name: "comments",
+  name: 'comments',
   initialState,
   reducers: {
     addComment: (state, action) => {
